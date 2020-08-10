@@ -2,12 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bluecat918.github.io</id>
     <title>BlueCat</title>
-    <updated>2020-08-05T16:53:40.391Z</updated>
+    <updated>2020-08-10T06:17:23.696Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bluecat918.github.io"/>
     <link rel="self" href="https://bluecat918.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>拾遗</subtitle>
     <logo>https://bluecat918.github.io/images/avatar.png</logo>
     <icon>https://bluecat918.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, BlueCat</rights>
+    <entry>
+        <title type="html"><![CDATA[git push同时推送到两个远程仓库]]></title>
+        <id>https://bluecat918.github.io/post/git-push-tong-shi-tui-song-dao-liang-ge-yuan-cheng-cang-ku/</id>
+        <link href="https://bluecat918.github.io/post/git-push-tong-shi-tui-song-dao-liang-ge-yuan-cheng-cang-ku/">
+        </link>
+        <updated>2020-08-10T06:12:16.000Z</updated>
+    </entry>
 </feed>
