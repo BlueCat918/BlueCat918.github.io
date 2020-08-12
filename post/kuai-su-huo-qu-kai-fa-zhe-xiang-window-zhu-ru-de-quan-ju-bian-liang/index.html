@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>BlueCat</title>
+<title>快速获取开发者向 window 注入的全局变量 | BlueCat</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,12 @@
 
 
 
-    <meta name="description" content="拾遗">
-    
+    <meta name="description" content="(function () {
+  const keys = []
+  const iframe = document.createElement('iframe')
+  iframe.onload = function () {
+    c..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -90,57 +94,44 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://bluecat918.github.io/post/kuai-su-huo-qu-kai-fa-zhe-xiang-window-zhu-ru-de-quan-ju-bian-liang/">
-                  <h2 class="post-title">快速获取开发者向 window 注入的全局变量</h2>
-                </a>
-                <div class="post-date">
-                  2020-08-12
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://bluecat918.github.io/post/git-gong-ju-ping-zheng-cun-chu/">
-                  <h2 class="post-title">Git 工具 - 凭证存储</h2>
-                </a>
-                <div class="post-date">
-                  2020-08-11
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://bluecat918.github.io/post/git-push-tong-shi-tui-song-dao-liang-ge-yuan-cheng-cang-ku/">
-                  <h2 class="post-title">git push同时推送到两个远程仓库</h2>
-                </a>
-                <div class="post-date">
-                  2020-08-10
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">快速获取开发者向 window 注入的全局变量</h2>
+            <div class="post-date">2020-08-12</div>
+            
+            <div class="post-content" v-pre>
+              <pre><code class="language-javascript">(function () {
+  const keys = []
+  const iframe = document.createElement('iframe')
+  iframe.onload = function () {
+    const iframeKeys = Object.keys(iframe.contentWindow)
+    Object.keys(window).forEach(function (key) {
+      if (!iframeKeys.includes(key)) {
+        keys.push(key)
+      }
+    })
+    console.log(keys)
+  }
+  iframe.src = 'about:blank'
+  document.body.appendChild(iframe)
+})()
+</code></pre>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://bluecat918.github.io/post/git-gong-ju-ping-zheng-cun-chu/">
+                  <h3 class="post-title">
+                    Git 工具 - 凭证存储
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
 
         </div>
       </div>
