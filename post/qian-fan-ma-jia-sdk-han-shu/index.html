@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>千帆,马甲sdk函数 | BlueCat</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://bluecat918.github.io/favicon.ico?v=1599104321778">
+<link rel="stylesheet" href="https://bluecat918.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="千帆
+var QF = {
+  Order: function (json, OrderCallBack) {},
+  afterChangeName: function (newName, renameCard) {},
+  bottom..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://bluecat918.github.io">
+        <!-- <img src="https://bluecat918.github.io/images/avatar.png?v=1599104321778" class="site-logo"> -->
+        <img src="https://api.uomg.com/api/rand.avatar" class="site-logo">
+        <h1 class="site-title">BlueCat</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      拾遗
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://bluecat918.github.io" target="_blank">BlueCat</a> | <a class="rss" href="https://bluecat918.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">千帆,马甲sdk函数</h2>
+            <div class="post-date">2020-09-03</div>
+            
+            <div class="post-content" v-pre>
+              <h3 id="千帆">千帆</h3>
+<pre><code class="language-javascript">var QF = {
+  Order: function (json, OrderCallBack) {},
+  afterChangeName: function (newName, renameCard) {},
+  bottomReplyComponent: function (buttons) {},
+  close: function () {},
+  createOrder: function (type, item, send_type, address, allow_pay_type, createOrderCallBack) {},
+  getClassifyViewInfo: function (infoId, viewInfoCallback) {},
+  getDeviceId: function (getDeviceIdCallBack) {},
+  getLocation: function (getLocationCallBack) {},
+  getNotificationStatus: function (noticeCallback) {},
+  getRequestParams: function (objectKeys, options, requestCallback) {},
+  getSystemNotice: function (needAlert, noticeCallBack) {},
+  getUmengInfo: function (getUmengInfoCallback) {},
+  getUserInfo: function (getUserInfoCallBack) {},
+  getUserThirdInfo: function (thirdInfoCallback) {},
+  hideLoading: function () {},
+  jumpAddress: function (jumpAddressCallBack) {},
+  jumpBindMobile: function (jumpBindMobileCallBack) {},
+  jumpBindThirdPlatform: function (platform, bindThirdCallback) {},
+  jumpDisclaimer: function () {},
+  jumpEditLink: function (text, link, linkCallback) {},
+  jumpEnvelopeList: function () {},
+  jumpForum: function () {},
+  jumpFriendContainer: function (type) {},
+  jumpGroup: function (gid) {},
+  jumpLikeList: function (tid) {},
+  jumpLogin: function (jumpLoginCallBack) {},
+  jumpMap: function (lat, lng, address, type, mapCallback) {},
+  jumpMiniProgram: function (wxid, wxpath, minCallback) {},
+  jumpMyPackage: function () {},
+  jumpNewWebview: function (url) {},
+  jumpNewWebviewWithClose: function (url) {},
+  jumpNotificationSetting: function () {},
+  jumpPay: function (type, item, send_type, address, allow_pay_type, jumpPayCallBack) {},
+  jumpPayOrder: function (orderId, jumpPayOrderCallBack) {},
+  jumpPayQF: function (type, item, send_type, address, jumpPayQFCallBack) {},
+  jumpPos: function () {},
+  jumpPostSide: function (content, jumpPostSideCallBack) {},
+  jumpPostThread: function (fid, fname, content, jumpPostThreadCallBack) {},
+  jumpProfile: function () {},
+  jumpReward: function (json, jumpRewardCallBack) {},
+  jumpScan: function (jumpScanCallBack) {},
+  jumpSide: function (sid) {},
+  jumpSideList: function (tid, tname) {},
+  jumpTalk: function (uid, username, avatar) {},
+  jumpTalkWithClassify: function (uid, username, avatar, jsChatClassifyParams) {},
+  jumpTel: function (telNum) {},
+  jumpThirdLogin: function (platform, thirdLoginCallback) {},
+  jumpThread: function (tid) {},
+  jumpThreadGiftDialog: function (tid, fid, uid, giftCallBack) {},
+  jumpThreadGiftRank: function (tid) {},
+  jumpThreadList: function (fid) {},
+  jumpTopic: function () {},
+  jumpUser: function (uid) {},
+  listCoverImages: function (listImagesCallback) {},
+  openApp: function (packagename) {},
+  openMapList: function (Longitude, latitude) {},
+  openPacket: function (json, packetCallBack) {},
+  openRedPackage: function (package_id, options, openRedPackageCallback) {},
+  openShare: function (platform) {},
+  openShareDialog: function () {},
+  outOpen: function (url) {},
+  provideLogin: function (loginType, openid, unionid, nickname) {},
+  refresh: function (refresh) {},
+  replyComponent: function (replyConfig, replyCallback) {},
+  reward: function (uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, rewardCallBack) {},
+  sendRedPackage: function (source, source_id, options, sendRedPackageCallback) {},
+  sendSMS: function (phone, content, sendSMSCallBack) {},
+  setClassifyDetail: function (source_id, author_id, is_collect, can_get_envelope, category_id, group_id, envelope_id, share_envelope) {},
+  setMenu: function (hide) {},
+  setOutOpen: function (hide) {},
+  setRefresh: function (show) {},
+  setScan: function (hide) {},
+  setSharable: function (hide) {},
+  setShareInfo: function (title, image, description, url, setShareInfoCallBack, shareType, shareAppLink, WxMiniProgram) {},
+  setShareWord: function (word, koulingCallBack) {},
+  setTitle: function (title) {},
+  shouldUpdateGoldLevel: function () {},
+  showCustomEditor: function (requestUrl, additionalParams, componentControl, editorCallback) {},
+  showImageRemarkLayer: function (remark, remarkCallback) {},
+  showNotificationDialog: function () {},
+  toast: function (type, content, duration) {},
+  uploadImageOrVideo: function (type, jsUploadOptions, UploadCallBack) {},
+  viewImages: function (position, jsonArray) {}
+}
+</code></pre>
+<h3 id="马甲">马甲</h3>
+<pre><code class="language-javascript">!
+function() {
+    function n(n) {
+        if (!window.MagAndroidClient) {
+            if (window.WebViewJavascriptBridge) return n(WebViewJavascriptBridge);
+            if (document.addEventListener(&quot;WebViewJavascriptBridgeReady&quot;,
+            function(i) {
+                n(WebViewJavascriptBridge)
+            },
+            !1), window.WVJBCallbacks) return window.WVJBCallbacks.push(n);
+            window.WVJBCallbacks = [n];
+            var i = document.createElement(&quot;iframe&quot;);
+            i.style.display = &quot;none&quot;,
+            i.src = &quot;https://__bridge_loaded__&quot;,
+            document.documentElement.appendChild(i),
+            setTimeout(function() {
+                document.documentElement.removeChild(i)
+            },
+            0)
+        }
+    }
+    n(function(n) {
+        n.init &amp;&amp; &quot;function&quot; == typeof n.init &amp;&amp; n.init(function(n, i) {}),
+        n.registerHandler(&quot;jsCallBack&quot;,
+        function(n, i) {
+            var o = JSON.parse(n),
+            a = o.id,
+            e = o.val,
+            t = mag.callbacks[a];
+            t &amp;&amp; (t.type &amp;&amp; &quot;json&quot; == t.type &amp;&amp; e &amp;&amp; (e = JSON.parse(e)), t.success(e))
+        })
+    }),
+    mag = {
+        VERSION: &quot;1.1&quot;,
+        ready: function(i) {
+            n(function() {
+                i()
+            }),
+            window.MagAndroidClient &amp;&amp; i()
+        },
+        callbacks: {},
+        iosConnect: n,
+        jsCallBack: function(n, i) {
+            var o = mag.callbacks[n];
+            o &amp;&amp; (o.type &amp;&amp; &quot;json&quot; == o.type &amp;&amp; i &amp;&amp; (i = JSON.parse(i)), o.success(i))
+        },
+        getLocation: function(i) {
+            i &amp;&amp; (mag.callbacks.getLocation = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getLocation(), n(function(n) {
+                n.callHandler(&quot;getLocation&quot;, &quot;&quot;,
+                function(n) {})
+            }))
+        },
+        mapPick: function(i) {
+            i &amp;&amp; (mag.callbacks.mapPick = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.mapPick(), n(function(n) {
+                n.callHandler(&quot;mapPick&quot;, &quot;&quot;,
+                function() {})
+            }))
+        },
+        closeWin: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.closeWin(),
+            n(function(n) {
+                n.callHandler(&quot;closeWin&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        previewImage: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.previewImage(o),
+            n(function(n) {
+                n.callHandler(&quot;previewImage&quot;, o,
+                function(n) {})
+            })
+        },
+        picPick: function(i) {
+            mag.callbacks.picPickPreview = {
+                type: &quot;json&quot;,
+                success: i.preview
+            },
+            mag.callbacks.picPickSuccess = {
+                type: &quot;json&quot;,
+                success: i.success
+            },
+            mag.callbacks.picPickFail = {
+                type: &quot;json&quot;,
+                success: i.fail
+            };
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.picPick(o),
+            n(function(n) {
+                n.callHandler(&quot;picPick&quot;, o,
+                function(n) {})
+            })
+        },
+        camera: function(i) {
+            mag.callbacks.cameraPreview = {
+                type: &quot;json&quot;,
+                success: i.preview
+            },
+            mag.callbacks.cameraSuccess = {
+                type: &quot;json&quot;,
+                success: i.success
+            },
+            mag.callbacks.cameraFail = {
+                type: &quot;json&quot;,
+                success: i.fail
+            };
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.camera(o),
+            n(function(n) {
+                n.callHandler(&quot;camera&quot;, o,
+                function(n) {})
+            })
+        },
+        setData: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setData(o),
+            n(function(n) {
+                n.callHandler(&quot;setData&quot;, o,
+                function(n) {})
+            })
+        },
+        share: function(i, o, a) {
+            mag.callbacks.shareSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.shareFailed = {
+                type: &quot;&quot;,
+                success: a
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.share(i),
+            n(function(n) {
+                n.callHandler(&quot;share&quot;, i,
+                function(n) {})
+            })
+        },
+        shareCard: function(i, o, a) {
+            mag.callbacks.shareSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.shareFailed = {
+                type: &quot;&quot;,
+                success: a
+            };
+            var e = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.shareCard(e),
+            n(function(n) {
+                n.callHandler(&quot;shareCard&quot;, e,
+                function(n) {})
+            })
+        },
+        socialBind: function(i, o, a) {
+            mag.callbacks.bindOnSuccess = {
+                type: &quot;json&quot;,
+                success: o
+            },
+            mag.callbacks.bindOnFail = {
+                type: &quot;json&quot;,
+                success: a
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.socialBind(i),
+            n(function(n) {
+                n.callHandler(&quot;socialBind&quot;, i,
+                function(n) {})
+            })
+        },
+        report: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.report(o),
+            n(function(n) {
+                n.callHandler(&quot;report&quot;, o,
+                function(n) {})
+            })
+        },
+        scanQR: function(i) {
+            i &amp;&amp; (mag.callbacks.scanQR = {
+                type: &quot;&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.scanQR(), n(function(n) {
+                n.callHandler(&quot;scanQR&quot;, &quot;&quot;,
+                function(n) {})
+            }))
+        },
+        actionSheet: function(i, o) {
+            if (o) {
+                var a = JSON.stringify(i);
+                mag.callbacks.actionSheet = {
+                    type: &quot;json&quot;,
+                    success: o
+                },
+                window.MagAndroidClient &amp;&amp; window.MagAndroidClient.actionSheet(a),
+                n(function(n) {
+                    n.callHandler(&quot;actionSheet&quot;, a,
+                    function(n) {})
+                })
+            }
+        },
+        toast: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toast(i),
+            n(function(n) {
+                n.callHandler(&quot;toast&quot;, i,
+                function(n) {})
+            })
+        },
+        dialog: function(i) {
+            var o = JSON.stringify(i);
+            mag.callbacks.dialogSuccess = {
+                type: &quot;json&quot;,
+                success: i.success
+            },
+            mag.callbacks.dialogCancel = {
+                type: &quot;json&quot;,
+                success: i.cancel
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.dialog(o),
+            n(function(n) {
+                n.callHandler(&quot;dialog&quot;, o,
+                function(n) {})
+            })
+        },
+        progress: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.progress(),
+            n(function(n) {
+                n.callHandler(&quot;progress&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        hideProgress: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideProgress(),
+            n(function(n) {
+                n.callHandler(&quot;hideProgress&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        setTitle: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setTitle(i),
+            n(function(n) {
+                n.callHandler(&quot;setTitle&quot;, i,
+                function(n) {})
+            })
+        },
+        showNavigation: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.showNavigation(),
+            n(function(n) {
+                n.callHandler(&quot;showNavigation&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        hideNavigation: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideNavigation(),
+            n(function(n) {
+                n.callHandler(&quot;hideNavigation&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        setNavigationColor: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setNavigationColor(i),
+            n(function(n) {
+                n.callHandler(&quot;setNavigationColor&quot;, i,
+                function(n) {})
+            })
+        },
+        hideMore: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideMore(),
+            n(function(n) {
+                n.callHandler(&quot;hideMore&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        showMore: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.showMore(),
+            n(function(n) {
+                n.callHandler(&quot;showMore&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        tel: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.tel(i),
+            n(function(n) {
+                n.callHandler(&quot;tel&quot;, i,
+                function(n) {})
+            })
+        },
+        sms: function(i, o) {
+            var a = JSON.stringify({
+                phone: i,
+                content: o
+            });
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.sms(a),
+            n(function(n) {
+                n.callHandler(&quot;sms&quot;, a,
+                function(n) {})
+            })
+        },
+        toLogin: function(i) {
+            mag.callbacks.loginSuccess = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toLogin(),
+            n(function(n) {
+                n.callHandler(&quot;toLogin&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        toUserHome: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toUserHome(i),
+            n(function(n) {
+                n.callHandler(&quot;toUserHome&quot;, i,
+                function(n) {})
+            })
+        },
+        addRedPacket: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.addRedPacket(i),
+            n(function(n) {
+                n.callHandler(&quot;addRedPacket&quot;, i,
+                function(n) {})
+            })
+        },
+        toUserHomeByName: function(i) {
+            i &amp;&amp; (window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toUserHomeByName(i), n(function(n) {
+                n.callHandler(&quot;toUserHomeByName&quot;, i,
+                function(n) {})
+            }))
+        },
+        commentBar: function(i) {
+            var o = JSON.stringify(i);
+            i.onComment &amp;&amp; (mag.callbacks.commentBar = {
+                type: &quot;json&quot;,
+                success: i.onComment
+            }),
+            i.onCommentShow &amp;&amp; (mag.callbacks.onCommentShow = {
+                type: &quot;&quot;,
+                success: i.onCommentShow
+            }),
+            i.onPageSelect &amp;&amp; (mag.callbacks.pageSelect = {
+                type: &quot;json&quot;,
+                success: i.onPageSelect
+            }),
+            i.onApplaud &amp;&amp; (mag.callbacks.applaud = {
+                type: &quot;json&quot;,
+                success: i.onApplaud
+            }),
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.commentBar(o),
+            n(function(n) {
+                n.callHandler(&quot;commentBar&quot;, o,
+                function(n) {})
+            })
+        },
+        toComment: function(i) {
+            var o = JSON.stringify(i);
+            i.success &amp;&amp; (mag.callbacks.comment = {
+                type: &quot;json&quot;,
+                success: i.success
+            }),
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toComment(o),
+            n(function(n) {
+                n.callHandler(&quot;toComment&quot;, o,
+                function(n) {})
+            })
+        },
+        newWin: function(i, o) {
+            i.indexOf(&quot;?&quot;) &lt; 0 &amp;&amp; (i += &quot;?&quot;);
+            for (var a in o) i += &quot;&amp;&quot; + a + &quot;=&quot; + o[a];
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.newWin(i),
+            n(function(n) {
+                n.callHandler(&quot;newWin&quot;, i,
+                function(n) {})
+            })
+        },
+        setPageLife: function(n) {
+            mag.callbacks.pageAppear = {
+                type: &quot;&quot;,
+                success: n.pageAppear
+            },
+            mag.callbacks.pageDisappear = {
+                type: &quot;&quot;,
+                success: n.pageDisappear
+            }
+        },
+        followAuthorFromNative: function(n) {
+            mag.callbacks.followAuthorFromNative = {
+                type: &quot;&quot;,
+                success: n.followAuthorFromNative
+            }
+        },
+        availableSharePlatform: function(i) {
+            mag.callbacks.availableSharePlatform = {
+                type: &quot;json&quot;,
+                success: i.availableSharePlatform
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.availableSharePlatform(),
+            n(function(n) {
+                n.callHandler(&quot;availableSharePlatform&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        pay: function(i, o, a) {
+            mag.callbacks.payOnSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.payOnFail = {
+                type: &quot;&quot;,
+                success: a
+            };
+            var e = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.pay(e),
+            n(function(n) {
+                n.callHandler(&quot;pay&quot;, e,
+                function(n) {})
+            })
+        },
+        alipay: function(i, o, a) {
+            if (!i) return ! 1;
+            mag.callbacks.alipayOnSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.alipayOnFail = {
+                type: &quot;&quot;,
+                success: a
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.alipay(i),
+            n(function(n) {
+                n.callHandler(&quot;alipay&quot;, i,
+                function(n) {})
+            })
+        },
+        inAppPay: function(i, o, a) {
+            mag.callbacks.inAppPaySuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.inAppPayOnFail = {
+                type: &quot;&quot;,
+                success: a
+            };
+            var e = JSON.stringify(i);
+            n(function(n) {
+                n.callHandler(&quot;inAppPay&quot;, e,
+                function(n) {})
+            })
+        },
+        deviceLogin: function(i) {
+            mag.callbacks.loginSuccess = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            n(function(n) {
+                n.callHandler(&quot;deviceLogin&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        phoneBind: function(i) {
+            mag.callbacks.phoneBindSuccess = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.phoneBind(),
+            n(function(n) {
+                n.callHandler(&quot;phoneBind&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        qqConnectLogin: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.qqConnectLogin(i),
+            n(function(n) {
+                n.callHandler(&quot;qqConnectLogin&quot;, i,
+                function(n) {})
+            })
+        },
+        bounceEnable: function(i) {
+            n(function(n) {
+                n.callHandler(&quot;bounceEnable&quot;, i,
+                function(n) {})
+            })
+        },
+        showNaviAuthor: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.showNaviAuthor(),
+            n(function(n) {
+                n.callHandler(&quot;showNaviAuthor&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        hideNaviAuthor: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideNaviAuthor(),
+            n(function(n) {
+                n.callHandler(&quot;hideNaviAuthor&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        followAuthorFromWeb: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.followAuthorFromWeb(i),
+            n(function(n) {
+                n.callHandler(&quot;followAuthorFromWeb&quot;, i,
+                function(n) {})
+            })
+        },
+        setSwipeBackDisable: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setSwipeBackDisable(),
+            n(function() {
+                bridge.callHandler(&quot;setSwipeBackDisable&quot;,
+                function(n) {})
+            })
+        },
+        setSwipeBackEnable: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setSwipeBackEnable(),
+            n(function() {
+                bridge.callHandler(&quot;setSwipeBackEnable&quot;,
+                function(n) {})
+            })
+        },
+        addRefreshComponent: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.addRefreshComponent(),
+            n(function(n) {
+                n.callHandler(&quot;addRefreshComponent&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        sappHome: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.sappHome(i),
+            n(function(n) {
+                n.callHandler(&quot;sappHome&quot;, i,
+                function(n) {})
+            })
+        },
+        chat: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.chat(o),
+            n(function(n) {
+                n.callHandler(&quot;chat&quot;, o,
+                function(n) {})
+            })
+        },
+        newExternalWin: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.newExternalWin(o),
+            n(function(n) {
+                n.callHandler(&quot;newExternalWin&quot;, o,
+                function(n) {})
+            })
+        },
+        getAppAuthKey: function(i) {
+            i &amp;&amp; (mag.callbacks.getAppAuthKey = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getAppAuthKey(), n(function(n) {
+                n.callHandler(&quot;getAppAuthKey&quot;, &quot;&quot;,
+                function(n) {})
+            }))
+        },
+        sendGift: function(i, o) {
+            var a = JSON.stringify(i);
+            mag.callbacks.giftSendSuccess = {
+                type: &quot;json&quot;,
+                success: o
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.sendGift(a),
+            n(function(n) {
+                n.callHandler(&quot;sendGift&quot;, a,
+                function(n) {})
+            })
+        },
+        showPhoneSettings: function() {
+            n(function(n) {
+                n.callHandler(&quot;showPhoneSettings&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        getNotificationStatus: function(i) {
+            mag.callbacks.getNotificationStatus = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            n(function(n) {
+                n.callHandler(&quot;getNotificationStatus&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        downloadAttachment: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.downloadAttachment(o),
+            n(function(n) {
+                n.callHandler(&quot;downloadAttachment&quot;, o,
+                function(n) {})
+            })
+        },
+        getNetworkState: function(i) {
+            mag.callbacks.getNetworkState = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getNetworkState(),
+            n(function(n) {
+                n.callHandler(&quot;getNetworkState&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        getDeviceId: function(i) {
+            mag.callbacks.getDeviceId = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getDeviceId(),
+            n(function(n) {
+                n.callHandler(&quot;getDeviceId&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        }
+    },
+    window.mag = mag,
+    mag.VERSION = &quot;1.3.2&quot;
+} ();
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://bluecat918.github.io/post/kuai-su-huo-qu-kai-fa-zhe-xiang-window-zhu-ru-de-quan-ju-bian-liang/">
+                  <h3 class="post-title">
+                    快速获取开发者向 window 注入的全局变量
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
