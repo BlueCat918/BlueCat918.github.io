@@ -760,6 +760,44 @@ a {
 }
 
       .sidebar {
-    background-image: url(//api.uomg.com/api/rand.img2);
+  background-image: url(//api.uomg.com/api/rand.img2)
+}
+
+.sidebar .top-header-container {
+  position: relative
+}
+
+.sidebar .top-header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #F1F3F5;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-image: url(//api.uomg.com/api/rand.avatar);
+  background-size: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+.sidebar .top-header-container .site-logo {
+  opacity: 0
+}
+
+@media (max-width:800px) {
+  .sidebar {
+    background-image: url(//api.uomg.com/api/rand.img1)
+  }
+
+  .sidebar .top-header-container::before {
+    width: 48px;
+    height: 48px;
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
 }
     
