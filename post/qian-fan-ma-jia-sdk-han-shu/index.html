@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://bluecat918.github.io/favicon.ico?v=1599104361192">
+<link rel="shortcut icon" href="https://bluecat918.github.io/favicon.ico?v=1599637006443">
 <link rel="stylesheet" href="https://bluecat918.github.io/styles/main.css">
 
 
@@ -19,10 +19,13 @@
 
 
     <meta name="description" content="千帆
-var QF = {
-  Order: function (json, OrderCallBack) {},
-  afterChangeName: function (newName, renameCard) {},
-  bottom..." />
+var QF = function () {};
+
+var currentcallbacks = {};
+
+//1、刷新
+QF.prototype.refresh = function (refresh) {
+  QFNew.refr..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -32,7 +35,7 @@ var QF = {
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://bluecat918.github.io">
-        <!-- <img src="https://bluecat918.github.io/images/avatar.png?v=1599104361192" class="site-logo"> -->
+        <!-- <img src="https://bluecat918.github.io/images/avatar.png?v=1599637006443" class="site-logo"> -->
         <img src="https://api.uomg.com/api/rand.avatar" class="site-logo">
         <h1 class="site-title">BlueCat</h1>
       </a>
@@ -100,91 +103,638 @@ var QF = {
             
             <div class="post-content" v-pre>
               <h3 id="千帆">千帆</h3>
-<pre><code class="language-javascript">var QF = {
-  Order: function (json, OrderCallBack) {},
-  afterChangeName: function (newName, renameCard) {},
-  bottomReplyComponent: function (buttons) {},
-  close: function () {},
-  createOrder: function (type, item, send_type, address, allow_pay_type, createOrderCallBack) {},
-  getClassifyViewInfo: function (infoId, viewInfoCallback) {},
-  getDeviceId: function (getDeviceIdCallBack) {},
-  getLocation: function (getLocationCallBack) {},
-  getNotificationStatus: function (noticeCallback) {},
-  getRequestParams: function (objectKeys, options, requestCallback) {},
-  getSystemNotice: function (needAlert, noticeCallBack) {},
-  getUmengInfo: function (getUmengInfoCallback) {},
-  getUserInfo: function (getUserInfoCallBack) {},
-  getUserThirdInfo: function (thirdInfoCallback) {},
-  hideLoading: function () {},
-  jumpAddress: function (jumpAddressCallBack) {},
-  jumpBindMobile: function (jumpBindMobileCallBack) {},
-  jumpBindThirdPlatform: function (platform, bindThirdCallback) {},
-  jumpDisclaimer: function () {},
-  jumpEditLink: function (text, link, linkCallback) {},
-  jumpEnvelopeList: function () {},
-  jumpForum: function () {},
-  jumpFriendContainer: function (type) {},
-  jumpGroup: function (gid) {},
-  jumpLikeList: function (tid) {},
-  jumpLogin: function (jumpLoginCallBack) {},
-  jumpMap: function (lat, lng, address, type, mapCallback) {},
-  jumpMiniProgram: function (wxid, wxpath, minCallback) {},
-  jumpMyPackage: function () {},
-  jumpNewWebview: function (url) {},
-  jumpNewWebviewWithClose: function (url) {},
-  jumpNotificationSetting: function () {},
-  jumpPay: function (type, item, send_type, address, allow_pay_type, jumpPayCallBack) {},
-  jumpPayOrder: function (orderId, jumpPayOrderCallBack) {},
-  jumpPayQF: function (type, item, send_type, address, jumpPayQFCallBack) {},
-  jumpPos: function () {},
-  jumpPostSide: function (content, jumpPostSideCallBack) {},
-  jumpPostThread: function (fid, fname, content, jumpPostThreadCallBack) {},
-  jumpProfile: function () {},
-  jumpReward: function (json, jumpRewardCallBack) {},
-  jumpScan: function (jumpScanCallBack) {},
-  jumpSide: function (sid) {},
-  jumpSideList: function (tid, tname) {},
-  jumpTalk: function (uid, username, avatar) {},
-  jumpTalkWithClassify: function (uid, username, avatar, jsChatClassifyParams) {},
-  jumpTel: function (telNum) {},
-  jumpThirdLogin: function (platform, thirdLoginCallback) {},
-  jumpThread: function (tid) {},
-  jumpThreadGiftDialog: function (tid, fid, uid, giftCallBack) {},
-  jumpThreadGiftRank: function (tid) {},
-  jumpThreadList: function (fid) {},
-  jumpTopic: function () {},
-  jumpUser: function (uid) {},
-  listCoverImages: function (listImagesCallback) {},
-  openApp: function (packagename) {},
-  openMapList: function (Longitude, latitude) {},
-  openPacket: function (json, packetCallBack) {},
-  openRedPackage: function (package_id, options, openRedPackageCallback) {},
-  openShare: function (platform) {},
-  openShareDialog: function () {},
-  outOpen: function (url) {},
-  provideLogin: function (loginType, openid, unionid, nickname) {},
-  refresh: function (refresh) {},
-  replyComponent: function (replyConfig, replyCallback) {},
-  reward: function (uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, rewardCallBack) {},
-  sendRedPackage: function (source, source_id, options, sendRedPackageCallback) {},
-  sendSMS: function (phone, content, sendSMSCallBack) {},
-  setClassifyDetail: function (source_id, author_id, is_collect, can_get_envelope, category_id, group_id, envelope_id, share_envelope) {},
-  setMenu: function (hide) {},
-  setOutOpen: function (hide) {},
-  setRefresh: function (show) {},
-  setScan: function (hide) {},
-  setSharable: function (hide) {},
-  setShareInfo: function (title, image, description, url, setShareInfoCallBack, shareType, shareAppLink, WxMiniProgram) {},
-  setShareWord: function (word, koulingCallBack) {},
-  setTitle: function (title) {},
-  shouldUpdateGoldLevel: function () {},
-  showCustomEditor: function (requestUrl, additionalParams, componentControl, editorCallback) {},
-  showImageRemarkLayer: function (remark, remarkCallback) {},
-  showNotificationDialog: function () {},
-  toast: function (type, content, duration) {},
-  uploadImageOrVideo: function (type, jsUploadOptions, UploadCallBack) {},
-  viewImages: function (position, jsonArray) {}
+<pre><code class="language-javascript">var QF = function () {};
+
+var currentcallbacks = {};
+
+//1、刷新
+QF.prototype.refresh = function (refresh) {
+  QFNew.refresh(refresh);
+};
+
+//2、跳转登陆
+QF.prototype.jumpLogin = function (jumpLoginCallBack) {
+  if (typeof jumpLoginCallBack == 'function') {
+    currentcallbacks[&quot;jumpLoginCallBack&quot;] = jumpLoginCallBack;
+    QFNew.jumpLogin('currentcallbacks[&quot;jumpLoginCallBack&quot;]');
+  } else {
+    QFNew.jumpLogin(jumpLoginCallBack);
+  }
+};
+
+
+//3、跳转绑定手机号
+QF.prototype.jumpBindMobile = function (jumpBindMobileCallBack) {
+  if (typeof jumpBindMobileCallBack == 'function') {
+    currentcallbacks[&quot;jumpBindMobileCallBack&quot;] = jumpBindMobileCallBack;
+    QFNew.jumpBindMobile('currentcallbacks[&quot;jumpBindMobileCallBack&quot;]');
+  } else {
+    QFNew.jumpBindMobile(jumpBindMobileCallBack);
+  }
+};
+
+
+//4、跳转帖子详情页
+QF.prototype.jumpThread = function (tid) {
+  QFNew.jumpThread(tid);
+};
+
+
+//5、跳转版块详情页
+QF.prototype.jumpThreadList = function (fid) {
+  QFNew.jumpThreadList(fid);
+};
+
+
+//6、跳转全部版块
+QF.prototype.jumpForum = function () {
+  QFNew.jumpForum();
+};
+
+
+//7、跳转发布帖子
+QF.prototype.jumpPostThread = function (fid, fname, content, jumpPostThreadCallBack) {
+  if (typeof jumpPostThreadCallBack == 'function') {
+    currentcallbacks[&quot;jumpPostThreadCallBack&quot;] = jumpPostThreadCallBack;
+    QFNew.jumpPostThread(fid, fname, content, 'currentcallbacks[&quot;jumpPostThreadCallBack&quot;]');
+  } else {
+    QFNew.jumpPostThread(fid, fname, content, jumpPostThreadCallBack);
+  }
+};
+
+
+//8、跳转本地圈详情页
+QF.prototype.jumpSide = function (sid) {
+  QFNew.jumpSide(sid);
+};
+
+
+//9、跳转本地圈话题详情页
+QF.prototype.jumpSideList = function (tid, tname) {
+  QFNew.jumpSideList(tid, tname);
+};
+
+
+//10、跳转本地圈话题列表页
+QF.prototype.jumpTopic = function () {
+  QFNew.jumpTopic();
+};
+
+
+//11、跳转发布本地圈
+QF.prototype.jumpPostSide = function (content, jumpPostSideCallBack) {
+  if (typeof jumpPostSideCallBack == 'function') {
+    currentcallbacks[&quot;jumpPostSideCallBack&quot;] = jumpPostSideCallBack;
+    QFNew.jumpPostSide(content, 'currentcallbacks[&quot;jumpPostSideCallBack&quot;]');
+  } else {
+    QFNew.jumpPostSide(content, jumpPostSideCallBack);
+  }
+};
+
+//12、跳转用户个人主页
+QF.prototype.jumpUser = function (uid) {
+  QFNew.jumpUser(uid);
+};
+
+//13、跳转私信对话页
+QF.prototype.jumpTalk = function (uid, username, avatar) {
+  QFNew.jumpTalk(uid, username, avatar);
+};
+
+//14、跳转扫一扫页面
+QF.prototype.jumpScan = function (jumpScanCallBack) {
+  if (typeof jumpScanCallBack == 'function') {
+    currentcallbacks[&quot;jumpScanCallBack&quot;] = jumpScanCallBack;
+    QFNew.jumpScan('currentcallbacks[&quot;jumpScanCallBack&quot;]');
+  } else {
+    QFNew.jumpScan(jumpScanCallBack);
+  }
+};
+
+//15、跳转外部浏览器
+QF.prototype.outOpen = function (url) {
+  QFNew.outOpen(url);
+};
+
+//16、打开分享平台
+QF.prototype.openShare = function (platform) {
+  QFNew.openShare(platform);
+};
+
+//17、调用更多分享弹窗
+QF.prototype.openShareDialog = function () {
+  QFNew.openShareDialog();
+};
+
+//18、安卓打开其他应用
+QF.prototype.openApp = function (packagename) {
+  QFNew.openApp(packagename);
+};
+
+
+//19、调用客户端发送短信的接口
+QF.prototype.sendSMS = function (phone, content, sendSMSCallBack) {
+  if (typeof sendSMSCallBack == 'function') {
+    currentcallbacks[&quot;sendSMSCallBack&quot;] = sendSMSCallBack;
+    QFNew.sendSMS(phone, content, 'currentcallbacks[&quot;sendSMSCallBack&quot;]');
+  } else {
+    QFNew.sendSMS(phone, content, sendSMSCallBack);
+  }
+};
+
+
+//20、调用原生界面浏览大图
+QF.prototype.viewImages = function (position, jsonArray) {
+  QFNew.viewImages(position, jsonArray);
+};
+
+
+//21、设置分享,shareType 1:链接分享 2:图片分享 3:小程序分享 shareAppLink 分享协议 WxMiniProgram 小程序参数，string
+QF.prototype.setShareInfo = function (title, image, description, url, setShareInfoCallBack, shareType, shareAppLink, WxMiniProgram) {
+  if (typeof setShareInfoCallBack == 'function') {
+    currentcallbacks[&quot;setShareInfoCallBack&quot;] = setShareInfoCallBack;
+    QFNew.setShareInfo(title, image, description, url, 'currentcallbacks[&quot;setShareInfoCallBack&quot;]', shareType, shareAppLink, WxMiniProgram);
+  } else {
+    QFNew.setShareInfo(title, image, description, url, setShareInfoCallBack, shareType, shareAppLink, WxMiniProgram);
+  }
+};
+
+//22、隐藏右上角菜单按钮
+QF.prototype.setMenu = function (hide) {
+  QFNew.setMenu(hide);
+};
+
+//23、隐藏分享按钮（同时隐藏复制链接地址）
+QF.prototype.setSharable = function (hide) {
+  QFNew.setSharable(hide);
+};
+
+//24、隐藏外部浏览器打开按钮
+QF.prototype.setOutOpen = function (hide) {
+  QFNew.setOutOpen(hide);
+};
+
+//25、关闭当前Webview
+QF.prototype.close = function () {
+  QFNew.close();
+};
+
+
+//26、获取当前经纬度
+QF.prototype.getLocation = function (getLocationCallBack) {
+  if (typeof getLocationCallBack == 'function') {
+    currentcallbacks[&quot;getLocationCallBack&quot;] = getLocationCallBack;
+    QFNew.getLocation('currentcallbacks[&quot;getLocationCallBack&quot;]');
+  } else {
+    QFNew.getLocation(getLocationCallBack);
+  }
+};
+
+//27、获取当前用户信息
+QF.prototype.getUserInfo = function (getUserInfoCallBack) {
+  if (typeof getUserInfoCallBack == 'function') {
+    currentcallbacks[&quot;getUserInfoCallBack&quot;] = getUserInfoCallBack;
+    QFNew.getUserInfo('currentcallbacks[&quot;getUserInfoCallBack&quot;]');
+  } else {
+    QFNew.getUserInfo(getUserInfoCallBack);
+  }
+};
+
+
+//28、获取设备号
+QF.prototype.getDeviceId = function (getDeviceIdCallBack) {
+  if (typeof getDeviceIdCallBack == 'function') {
+    currentcallbacks[&quot;getDeviceIdCallBack&quot;] = getDeviceIdCallBack;
+    QFNew.getDeviceId('currentcallbacks[&quot;getDeviceIdCallBack&quot;]');
+  } else {
+    QFNew.getDeviceId(getDeviceIdCallBack);
+  }
+};
+
+//29、跳转编辑个人中心页面
+QF.prototype.jumpProfile = function () {
+  QFNew.jumpProfile();
+};
+
+//30、通知应用更新用户金币、等级、签到等信息
+QF.prototype.shouldUpdateGoldLevel = function () {
+  QFNew.shouldUpdateGoldLevel();
+};
+
+//31、调用原生打赏页面
+QF.prototype.reward = function (uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, rewardCallBack) {
+  if (typeof rewardCallBack == 'function') {
+    currentcallbacks[&quot;rewardCallBack&quot;] = rewardCallBack;
+    QFNew.reward(uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, 'currentcallbacks[&quot;rewardCallBack&quot;]');
+  } else {
+    QFNew.reward(uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, rewardCallBack);
+  }
+};
+
+//32、新增h5打赏，支持打赏url。
+QF.prototype.jumpReward = function (json, jumpRewardCallBack) {
+  if (typeof jumpRewardCallBack == 'function') {
+    currentcallbacks[&quot;jumpRewardCallBack&quot;] = jumpRewardCallBack;
+    QFNew.jumpReward(json, 'currentcallbacks[&quot;jumpRewardCallBack&quot;]');
+  } else {
+    QFNew.jumpReward(json, jumpRewardCallBack);
+  }
+};
+
+//33、显示客户端原生Toast
+QF.prototype.toast = function (type, content, duration) {
+  QFNew.toast(type, content, duration);
+};
+
+//34、显示右上角刷新按钮
+QF.prototype.setRefresh = function (show) {
+  QFNew.setRefresh(show);
+};
+
+//35、设置Webview标题
+QF.prototype.setTitle = function (title) {
+  QFNew.setTitle(title);
+};
+
+//36、跳转本地圈交友页面
+QF.prototype.jumpFriendContainer = function (type) {
+  QFNew.jumpFriendContainer(type);
+};
+
+//37、跳转新的Webview
+QF.prototype.jumpNewWebview = function (url) {
+  QFNew.jumpNewWebview(url);
+};
+
+//38、跳转支付页面
+QF.prototype.jumpPayOrder = function (orderId, jumpPayOrderCallBack) {
+  if (typeof jumpPayOrderCallBack == 'function') {
+    currentcallbacks[&quot;jumpPayOrderCallBack&quot;] = jumpPayOrderCallBack;
+    QFNew.jumpPayOrder(orderId, 'currentcallbacks[&quot;jumpPayOrderCallBack&quot;]');
+  } else {
+    QFNew.jumpPayOrder(orderId, jumpPayOrderCallBack);
+  }
+};
+
+//39、给站点创建订单
+QF.prototype.createOrder = function (type, item, send_type, address, allow_pay_type, createOrderCallBack) {
+  if (typeof createOrderCallBack == 'function') {
+    currentcallbacks[&quot;createOrderCallBack&quot;] = createOrderCallBack;
+    QFNew.createOrder(type, item, send_type, address, allow_pay_type, 'currentcallbacks[&quot;createOrderCallBack&quot;]');
+  } else {
+    QFNew.createOrder(type, item, send_type, address, allow_pay_type, createOrderCallBack);
+  }
+};
+
+//40、这个方法是给站点调用的调起支付,支付到站点
+QF.prototype.jumpPay = function (type, item, send_type, address, allow_pay_type, jumpPayCallBack) {
+  if (typeof jumpPayCallBack == 'function') {
+    currentcallbacks[&quot;jumpPayCallBack&quot;] = jumpPayCallBack;
+    QFNew.jumpPay(type, item, send_type, address, allow_pay_type, 'currentcallbacks[&quot;jumpPayCallBack&quot;]');
+  } else {
+    QFNew.jumpPay(type, item, send_type, address, allow_pay_type, jumpPayCallBack);
+  }
+};
+
+
+//41、支付到千帆
+QF.prototype.jumpPayQF = function (type, item, send_type, address, jumpPayQFCallBack) {
+  if (typeof jumpPayQFCallBack == 'function') {
+    currentcallbacks[&quot;jumpPayQFCallBack&quot;] = jumpPayQFCallBack;
+    QFNew.jumpPayQF(type, item, send_type, address, 'currentcallbacks[&quot;jumpPayQFCallBack&quot;]');
+  } else {
+    QFNew.jumpPayQF(type, item, send_type, address, jumpPayQFCallBack);
+  }
+};
+
+//42、跳转收货地址页面
+QF.prototype.jumpAddress = function (jumpAddressCallBack) {
+  if (typeof jumpAddressCallBack == 'function') {
+    currentcallbacks[&quot;jumpAddressCallBack&quot;] = jumpAddressCallBack;
+    QFNew.jumpAddress('currentcallbacks[&quot;jumpAddressCallBack&quot;]');
+  } else {
+    QFNew.jumpAddress(jumpAddressCallBack);
+  }
+};
+
+//43、更改名字后调用
+QF.prototype.afterChangeName = function (newName, renameCard) {
+  QFNew.afterChangeName(newName, renameCard);
+};
+
+//44、跳转我的钱包页面
+QF.prototype.jumpMyPackage = function () {
+  QFNew.jumpMyPackage();
+};
+
+//45、弹出电话弹窗
+QF.prototype.jumpTel = function (telNum) {
+  QFNew.jumpTel(telNum);
+};
+
+//46、跳转pos通
+QF.prototype.jumpPos = function () {
+  QFNew.jumpPos();
+};
+
+//47、跳转点赞列表
+QF.prototype.jumpLikeList = function (tid) {
+  QFNew.jumpLikeList(tid);
+};
+
+//48、跳转加入群组
+QF.prototype.jumpGroup = function (gid) {
+  QFNew.jumpGroup(gid);
+};
+
+//49、创建订单
+QF.prototype.Order = function (json, OrderCallBack) {
+  if (typeof OrderCallBack == 'function') {
+    currentcallbacks[&quot;OrderCallBack&quot;] = OrderCallBack;
+    QFNew.Order(json, 'currentcallbacks[&quot;OrderCallBack&quot;]');
+  } else {
+    QFNew.Order(json, OrderCallBack);
+  }
+};
+
+
+//50、跳转红包列表
+QF.prototype.jumpEnvelopeList = function () {
+  QFNew.jumpEnvelopeList();
+};
+
+
+//51、跳转红包列表
+QF.prototype.provideLogin = function (loginType, openid, unionid, nickname) {
+  QFNew.provideLogin(loginType, openid, unionid, nickname);
+};
+
+
+//52、打开红包
+QF.prototype.openPacket = function (json, packetCallBack) {
+  QFNew.openPacket(json, packetCallBack);
+};
+
+//53、唤起送礼dialog
+QF.prototype.jumpThreadGiftDialog = function (tid, fid, uid, giftCallBack) {
+  if (typeof giftCallBack == 'function') {
+    currentcallbacks[&quot;giftCallBack&quot;] = giftCallBack;
+    QFNew.jumpThreadGiftDialog(tid, fid, uid, 'currentcallbacks[&quot;giftCallBack&quot;]');
+  } else {
+    QFNew.jumpThreadGiftDialog(tid, fid, uid, giftCallBack);
+  }
+};
+
+//54、唤起送礼排行榜
+QF.prototype.jumpThreadGiftRank = function (tid) {
+  QFNew.jumpThreadGiftRank(tid);
+};
+
+QF.prototype.setScan = function (hide) {
+  QFNew.setScan(hide);
+};
+
+//55、判断当前设备是否开启接口app通知
+QF.prototype.getSystemNotice = function (needAlert, noticeCallBack) {
+  if (typeof noticeCallBack == 'function') {
+    currentcallbacks[&quot;noticeCallBack&quot;] = noticeCallBack;
+    QFNew.getSystemNotice(needAlert, 'currentcallbacks[&quot;noticeCallBack&quot;]');
+  } else {
+    QFNew.getSystemNotice(needAlert, noticeCallBack);
+  }
+};
+
+//56、上传图片/视频
+//    type 0: 公有 1:私有
+//    jsUploadOptions
+//          picFormat: 0 =&gt; jpeg,png 1=&gt; jpeg,png,gif 2=&gt;gif
+//          picMaxSize: 图片压缩后的最大宽高
+//          compressOption : 图片压缩比
+//          uploadNum: 上传数量
+//          uploadType: 0: 图片 1:视频
+//    callback
+QF.prototype.uploadImageOrVideo = function (type, jsUploadOptions, UploadCallBack) {
+  if (typeof UploadCallBack == 'function') {
+    currentcallbacks[&quot;UploadCallBack&quot;] = UploadCallBack;
+    QFNew.uploadImageOrVideo(type, jsUploadOptions, 'currentcallbacks[&quot;UploadCallBack&quot;]');
+  } else {
+    QFNew.uploadImageOrVideo(type, jsUploadOptions, UploadCallBack);
+  }
+};
+
+//跳转免责申明
+QF.prototype.jumpDisclaimer = function () {
+  QFNew.jumpDisclaimer();
+};
+
+// 设置页面淘口令分享，一旦设置，将代替setShareInfo
+QF.prototype.setShareWord = function (word, koulingCallBack) {
+  if (typeof koulingCallBack == 'function') {
+    currentcallbacks[&quot;koulingCallBack&quot;] = koulingCallBack;
+    QFNew.setShareWord(word, 'currentcallbacks[&quot;koulingCallBack&quot;]')
+  } else {
+    QFNew.setShareWord(word, koulingCallBack)
+  }
 }
+
+// 跳分类信息聊天
+QF.prototype.jumpTalkWithClassify = function (uid, username, avatar, jsChatClassifyParams) {
+  QFNew.jumpTalkWithClassify(uid, username, avatar, jsChatClassifyParams);
+};
+
+// 设置分类信息详情页的参数
+// source_id: 分类信息id
+// is_collect:是否收藏 1 =&gt; 已收藏 0 =&gt; 未收藏
+// can_get_envelope //该用户是否可以获取红包 0；没有红包标识 1：红包标识(已领取) 2红包标识(不可领取)
+// envelope_id: 红包id
+// group_id
+// category_id
+// share_envelope 用户是否可以塞红包 0: 不能 1: 能
+QF.prototype.setClassifyDetail = function (source_id, author_id, is_collect, can_get_envelope, category_id, group_id, envelope_id, share_envelope) {
+  QFNew.setClassifyDetail(source_id, author_id, is_collect, can_get_envelope, category_id, group_id, envelope_id, share_envelope);
+}
+
+// 根据经纬度去定位地图，选点后返回经纬度和具体地址 data: {lat:'',lan:'',address:''} type:1 可选 2 展示
+QF.prototype.jumpMap = function (lat, lng, address, type, mapCallback) {
+  if (typeof mapCallback == 'function') {
+    currentcallbacks[&quot;mapCallback&quot;] = mapCallback;
+    QFNew.jumpMap(lat, lng, address, type, 'currentcallbacks[&quot;mapCallback&quot;]')
+  } else {
+    QFNew.jumpMap(lat, lng, address, type, mapCallback)
+  }
+}
+
+QF.prototype.hideLoading = function () {
+  QFNew.dismissLoading();
+}
+
+QF.prototype.getClassifyViewInfo = function (infoId, viewInfoCallback) {
+  if (typeof viewInfoCallback == 'function') {
+    currentcallbacks[&quot;viewInfoCallback&quot;] = viewInfoCallback;
+    QFNew.getClassifyViewInfo(infoId, 'currentcallbacks[&quot;viewInfoCallback&quot;]');
+  } else {
+    QFNew.getClassifyViewInfo(infoId, viewInfoCallback);
+  }
+}
+
+QF.prototype.getClassifyViewInfo = function (infoId, viewInfoCallback) {
+  if (typeof viewInfoCallback == 'function') {
+    currentcallbacks[&quot;viewInfoCallback&quot;] = viewInfoCallback;
+    QFNew.getClassifyViewInfo(infoId, 'currentcallbacks[&quot;viewInfoCallback&quot;]');
+  } else {
+    QFNew.getClassifyViewInfo(infoId, viewInfoCallback);
+  }
+}
+
+// 跳新页面并且关闭当前页面
+QF.prototype.jumpNewWebviewWithClose = function (url) {
+  QFNew.jumpNewWebviewWithClose(url);
+}
+
+QF.prototype.jumpMiniProgram = function (wxid, wxpath, minCallback) {
+  if (typeof minCallback == 'function') {
+    currentcallbacks[&quot;minCallback&quot;] = minCallback;
+    QFNew.jumpMiniProgram(wxid, wxpath, 'currentcallbacks[&quot;minCallback&quot;]');
+  } else {
+    QFNew.jumpMiniProgram(wxid, wxpath, minCallback);
+  }
+}
+
+// 60 调用客户端input框
+QF.prototype.showCustomEditor = function (requestUrl, additionalParams, componentControl, editorCallback) {
+  if (typeof editorCallback == 'function') {
+    currentcallbacks[&quot;editorCallback&quot;] = editorCallback;
+    QFNew.showCustomEditor(requestUrl, additionalParams, componentControl, 'currentcallbacks[&quot;editorCallback&quot;]');
+  } else {
+    QFNew.showCustomEditor(requestUrl, additionalParams, componentControl, editorCallback);
+  }
+}
+
+QF.prototype.openMapList = function (Longitude, latitude) {
+  QFNew.openMapList(Longitude, latitude)
+}
+
+QF.prototype.bottomReplyComponent = function (buttons) {
+  QFNew.bottomReplyComponent(buttons)
+}
+
+QF.prototype.replyComponent = function (replyConfig, replyCallback) {
+  if (typeof replyCallback == 'function') {
+    currentcallbacks[&quot;replyCallback&quot;] = replyCallback;
+    QFNew.replyComponent(replyConfig, 'currentcallbacks[&quot;replyCallback&quot;]');
+  } else {
+    QFNew.replyComponent(replyConfig, replyCallback);
+  }
+}
+
+QF.prototype.sendRedPackage = function (source, source_id, options, sendRedPackageCallback) {
+  if (typeof sendRedPackageCallback == 'function') {
+    currentcallbacks[&quot;sendRedPackageCallback&quot;] = sendRedPackageCallback;
+    QFNew.sendRedPackage(source, source_id, options, 'currentcallbacks[&quot;sendRedPackageCallback&quot;]');
+  } else {
+    QFNew.sendRedPackage(source, source_id, options, sendRedPackageCallback);
+  }
+}
+
+QF.prototype.openRedPackage = function (package_id, options, openRedPackageCallback) {
+  if (typeof openRedPackageCallback == 'function') {
+    currentcallbacks[&quot;openRedPackageCallback&quot;] = openRedPackageCallback;
+    QFNew.openRedPackage(package_id, options, 'currentcallbacks[&quot;openRedPackageCallback&quot;]');
+  } else {
+    QFNew.openRedPackage(package_id, options, openRedPackageCallback);
+  }
+}
+
+QF.prototype.getUmengInfo = function (getUmengInfoCallback) {
+  if (typeof getUmengInfoCallback == 'function') {
+    currentcallbacks[&quot;getUmengInfoCallback&quot;] = getUmengInfoCallback;
+    QFNew.getUmengInfo('currentcallbacks[&quot;getUmengInfoCallback&quot;]');
+  } else {
+    QFNew.getUmengInfo(getUmengInfoCallback);
+  }
+}
+
+QF.prototype.getRequestParams = function (objectKeys, options, requestCallback) {
+  if (typeof requestCallback == 'function') {
+    currentcallbacks[&quot;requestCallback&quot;] = requestCallback;
+    QFNew.getRequestParams(objectKeys, options, 'currentcallbacks[&quot;requestCallback&quot;]');
+  } else {
+    QFNew.getRequestParams(objectKeys, options, requestCallback);
+  }
+}
+
+QF.prototype.jumpThirdLogin = function (platform, thirdLoginCallback) {
+  if (typeof thirdLoginCallback == 'function') {
+    currentcallbacks[&quot;thirdLoginCallback&quot;] = thirdLoginCallback;
+    QFNew.jumpThirdLogin(platform, 'currentcallbacks[&quot;thirdLoginCallback&quot;]');
+  } else {
+    QFNew.jumpThirdLogin(platform, thirdLoginCallback);
+  }
+}
+
+QF.prototype.getUserThirdInfo = function (thirdInfoCallback) {
+  if (typeof thirdInfoCallback == 'function') {
+    currentcallbacks[&quot;thirdInfoCallback&quot;] = thirdInfoCallback;
+    QFNew.getUserThirdInfo('currentcallbacks[&quot;thirdInfoCallback&quot;]');
+  } else {
+    QFNew.getUserThirdInfo(thirdInfoCallback);
+  }
+}
+
+QF.prototype.jumpBindThirdPlatform = function (platform, bindThirdCallback) {
+  if (typeof bindThirdCallback == 'function') {
+    currentcallbacks[&quot;bindThirdCallback&quot;] = bindThirdCallback;
+    QFNew.jumpBindThirdPlatform(platform, 'currentcallbacks[&quot;bindThirdCallback&quot;]');
+  } else {
+    QFNew.jumpBindThirdPlatform(platform, bindThirdCallback);
+  }
+}
+
+QF.prototype.showImageRemarkLayer = function (remark, remarkCallback) {
+  if (typeof remarkCallback == 'function') {
+    currentcallbacks[&quot;remarkCallback&quot;] = remarkCallback;
+    QFNew.showImageRemarkLayer(remark, 'currentcallbacks[&quot;remarkCallback&quot;]');
+  } else {
+    QFNew.showImageRemarkLayer(remark, remarkCallback);
+  }
+}
+
+
+QF.prototype.jumpEditLink = function (text, link, linkCallback) {
+  if (typeof linkCallback == 'function') {
+    currentcallbacks[&quot;linkCallback&quot;] = linkCallback;
+    QFNew.jumpEditLink(text, link, 'currentcallbacks[&quot;linkCallback&quot;]');
+  } else {
+    QFNew.jumpEditLink(text, link, linkCallback);
+  }
+}
+
+QF.prototype.listCoverImages = function (listImagesCallback) {
+  if (typeof listImagesCallback == 'function') {
+    currentcallbacks[&quot;listImagesCallback&quot;] = listImagesCallback;
+    QFNew.listCoverImages('currentcallbacks[&quot;listImagesCallback&quot;]');
+  } else {
+    QFNew.listCoverImages(listImagesCallback);
+  }
+}
+
+QF.prototype.getNotificationStatus = function (noticeCallback) {
+  if (typeof noticeCallback == 'function') {
+    currentcallbacks[&quot;noticeCallback&quot;] = noticeCallback
+    QFNew.getNotificationStatus('currentcallbacks[&quot;noticeCallback&quot;]')
+  } else {
+    QFNew.getNotificationStatus(noticeCallback)
+  }
+}
+
+QF.prototype.showNotificationDialog = function () {
+  QFNew.showNotificationDialog()
+}
+
+QF.prototype.jumpNotificationSetting = function () {
+  QFNew.jumpNotificationSetting()
+}
+var QFH5 = new QF();
 </code></pre>
 <h3 id="马甲">马甲</h3>
 <pre><code class="language-javascript">!
