@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>快速获取开发者向 window 注入的全局变量 | BlueCat</title>
+<title>微信打开千帆App | BlueCat</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,11 +18,9 @@
 
 
 
-    <meta name="description" content="(function () {
-  const keys = []
-  const iframe = document.createElement('iframe')
-  iframe.onload = function () {
-    c..." />
+    <meta name="description" content="  function getAppUrl () {
+    var href = window.location.href
+    var android = 'http://a.app.qq.com/o/simple.jsp?pkgnam..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -94,28 +92,17 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">快速获取开发者向 window 注入的全局变量</h2>
-            <div class="post-date">2020-08-12</div>
-            
-              <div class="feature-container" style="background-image: url('https://api.uomg.com/api/rand.img1?sort=动漫&amp;id=4')">
-              </div>
+            <h2 class="post-title">微信打开千帆App</h2>
+            <div class="post-date">2020-09-15</div>
             
             <div class="post-content" v-pre>
-              <pre><code class="language-javascript">(function () {
-  const keys = []
-  const iframe = document.createElement('iframe')
-  iframe.onload = function () {
-    const iframeKeys = Object.keys(iframe.contentWindow)
-    Object.keys(window).forEach(function (key) {
-      if (!iframeKeys.includes(key)) {
-        keys.push(key)
-      }
-    })
-    console.log(keys)
+              <pre><code class="language-js">  function getAppUrl () {
+    var href = window.location.href
+    var android = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.qianfan.xishu&amp;android_schema='
+    var ios = 'http://xishu.qianfanapi.com/'
+    var agree = 'xishu://webview/?url='
+    return isAndroid ? android + encodeURIComponent(agree + href) : ios + agree + href
   }
-  iframe.src = 'about:blank'
-  document.body.appendChild(iframe)
-})()
 </code></pre>
 
             </div>
@@ -123,9 +110,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://bluecat918.github.io/post/git-gong-ju-ping-zheng-cun-chu/">
+                <a href="https://bluecat918.github.io/post/qian-fan-ma-jia-sdk-han-shu/">
                   <h3 class="post-title">
-                    Git 工具 - 凭证存储
+                    千帆,马甲sdk函数
                   </h3>
                 </a>
               </div>
