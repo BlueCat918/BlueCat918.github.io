@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>移动端vue调试 | BlueCat</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://bluecat918.github.io/favicon.ico?v=1655169552333">
+<link rel="stylesheet" href="https://bluecat918.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+
+
+
+    <meta name="description" content="&lt;script src=&quot;https://unpkg.com/vconsole/dist/vconsole.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://bluecat918.github.io">
+        <img src="https://bluecat918.github.io/images/avatar.png?v=1655169552333" class="site-logo">
+        <h1 class="site-title">BlueCat</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      拾遗
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://bluecat918.github.io" target="_blank">BlueCat</a> | <a class="rss" href="https://bluecat918.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">移动端vue调试</h2>
+            <div class="post-date">2021-09-02</div>
+            
+              <div class="feature-container" style="background-image: url('https://api.btstu.cn/sjbz/api.php?lx=dongman')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <pre><code class="language-javascript">&lt;script src=&quot;https://unpkg.com/vconsole/dist/vconsole.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue-vconsole-devtools@0.0.7/dist/vue_plugin.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  var vConsole = new window.VConsole();
+  const Devtools = window.vueVconsoleDevtools[&quot;default&quot;];
+  Devtools.initPlugin(vConsole);
+&lt;/script&gt;
+</code></pre>
+<pre><code class="language-css">.image-item {
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 15rpx;
+    margin-top: 15rpx;
+}
+.image-item:nth-child(-n + 3) {
+    margin-top: 0;
+}
+.image-item:nth-child(3n) {
+    margin-right: 0;
+}
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://bluecat918.github.io/gitmoji/">
+                  <h3 class="post-title">
+                    Gitmoji
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.staticfile.org/highlight.js/11.5.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>

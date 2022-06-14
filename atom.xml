@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bluecat918.github.io</id>
+    <title>BlueCat</title>
+    <updated>2022-06-14T01:19:14.169Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://bluecat918.github.io"/>
+    <link rel="self" href="https://bluecat918.github.io/atom.xml"/>
+    <subtitle>拾遗</subtitle>
+    <logo>https://bluecat918.github.io/images/avatar.png</logo>
+    <icon>https://bluecat918.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, BlueCat</rights>
+    <entry>
+        <title type="html"><![CDATA[移动端vue调试]]></title>
+        <id>https://bluecat918.github.io/yi-dong-duan-vue-diao-shi/</id>
+        <link href="https://bluecat918.github.io/yi-dong-duan-vue-diao-shi/">
+        </link>
+        <updated>2021-09-02T07:12:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gitmoji]]></title>
+        <id>https://bluecat918.github.io/gitmoji/</id>
+        <link href="https://bluecat918.github.io/gitmoji/">
+        </link>
+        <updated>2021-06-24T10:16:52.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[工具函数]]></title>
+        <id>https://bluecat918.github.io/gong-ju-han-shu/</id>
+        <link href="https://bluecat918.github.io/gong-ju-han-shu/">
+        </link>
+        <updated>2021-04-21T07:43:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[微信打开千帆App]]></title>
+        <id>https://bluecat918.github.io/wei-xin-da-kai-qian-fan-app/</id>
+        <link href="https://bluecat918.github.io/wei-xin-da-kai-qian-fan-app/">
+        </link>
+        <updated>2020-09-15T14:18:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[千帆,马甲sdk函数]]></title>
+        <id>https://bluecat918.github.io/qian-fan-ma-jia-sdk-han-shu/</id>
+        <link href="https://bluecat918.github.io/qian-fan-ma-jia-sdk-han-shu/">
+        </link>
+        <updated>2020-09-03T03:34:13.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[快速获取开发者向 window 注入的全局变量]]></title>
+        <id>https://bluecat918.github.io/kuai-su-huo-qu-kai-fa-zhe-xiang-window-zhu-ru-de-quan-ju-bian-liang/</id>
+        <link href="https://bluecat918.github.io/kuai-su-huo-qu-kai-fa-zhe-xiang-window-zhu-ru-de-quan-ju-bian-liang/">
+        </link>
+        <updated>2020-08-12T01:38:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git 工具 - 凭证存储]]></title>
+        <id>https://bluecat918.github.io/git-gong-ju-ping-zheng-cun-chu/</id>
+        <link href="https://bluecat918.github.io/git-gong-ju-ping-zheng-cun-chu/">
+        </link>
+        <updated>2020-08-11T09:16:47.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[git push同时推送到两个远程仓库]]></title>
+        <id>https://bluecat918.github.io/git-push-tong-shi-tui-song-dao-liang-ge-yuan-cheng-cang-ku/</id>
+        <link href="https://bluecat918.github.io/git-push-tong-shi-tui-song-dao-liang-ge-yuan-cheng-cang-ku/">
+        </link>
+        <updated>2020-08-10T06:12:16.000Z</updated>
+    </entry>
+</feed>

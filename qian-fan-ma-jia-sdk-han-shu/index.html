@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>千帆,马甲sdk函数 | BlueCat</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://bluecat918.github.io/favicon.ico?v=1655169552333">
+<link rel="stylesheet" href="https://bluecat918.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+
+
+
+    <meta name="description" content="千帆
+var QF = function () {};
+
+var currentcallbacks = {};
+
+//1、刷新
+QF.prototype.refresh = function (refresh) {
+  QFNew.refr..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://bluecat918.github.io">
+        <img src="https://bluecat918.github.io/images/avatar.png?v=1655169552333" class="site-logo">
+        <h1 class="site-title">BlueCat</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      拾遗
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://bluecat918.github.io" target="_blank">BlueCat</a> | <a class="rss" href="https://bluecat918.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">千帆,马甲sdk函数</h2>
+            <div class="post-date">2020-09-03</div>
+            
+              <div class="feature-container" style="background-image: url('https://api.btstu.cn/sjbz/api.php?lx=dongman')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h3 id="千帆">千帆</h3>
+<pre><code class="language-javascript">var QF = function () {};
+
+var currentcallbacks = {};
+
+//1、刷新
+QF.prototype.refresh = function (refresh) {
+  QFNew.refresh(refresh);
+};
+
+//2、跳转登陆
+QF.prototype.jumpLogin = function (jumpLoginCallBack) {
+  if (typeof jumpLoginCallBack == 'function') {
+    currentcallbacks[&quot;jumpLoginCallBack&quot;] = jumpLoginCallBack;
+    QFNew.jumpLogin('currentcallbacks[&quot;jumpLoginCallBack&quot;]');
+  } else {
+    QFNew.jumpLogin(jumpLoginCallBack);
+  }
+};
+
+
+//3、跳转绑定手机号
+QF.prototype.jumpBindMobile = function (jumpBindMobileCallBack) {
+  if (typeof jumpBindMobileCallBack == 'function') {
+    currentcallbacks[&quot;jumpBindMobileCallBack&quot;] = jumpBindMobileCallBack;
+    QFNew.jumpBindMobile('currentcallbacks[&quot;jumpBindMobileCallBack&quot;]');
+  } else {
+    QFNew.jumpBindMobile(jumpBindMobileCallBack);
+  }
+};
+
+
+//4、跳转帖子详情页
+QF.prototype.jumpThread = function (tid) {
+  QFNew.jumpThread(tid);
+};
+
+
+//5、跳转版块详情页
+QF.prototype.jumpThreadList = function (fid) {
+  QFNew.jumpThreadList(fid);
+};
+
+
+//6、跳转全部版块
+QF.prototype.jumpForum = function () {
+  QFNew.jumpForum();
+};
+
+
+//7、跳转发布帖子
+QF.prototype.jumpPostThread = function (fid, fname, content, jumpPostThreadCallBack) {
+  if (typeof jumpPostThreadCallBack == 'function') {
+    currentcallbacks[&quot;jumpPostThreadCallBack&quot;] = jumpPostThreadCallBack;
+    QFNew.jumpPostThread(fid, fname, content, 'currentcallbacks[&quot;jumpPostThreadCallBack&quot;]');
+  } else {
+    QFNew.jumpPostThread(fid, fname, content, jumpPostThreadCallBack);
+  }
+};
+
+
+//8、跳转本地圈详情页
+QF.prototype.jumpSide = function (sid) {
+  QFNew.jumpSide(sid);
+};
+
+
+//9、跳转本地圈话题详情页
+QF.prototype.jumpSideList = function (tid, tname) {
+  QFNew.jumpSideList(tid, tname);
+};
+
+
+//10、跳转本地圈话题列表页
+QF.prototype.jumpTopic = function () {
+  QFNew.jumpTopic();
+};
+
+
+//11、跳转发布本地圈
+QF.prototype.jumpPostSide = function (content, jumpPostSideCallBack) {
+  if (typeof jumpPostSideCallBack == 'function') {
+    currentcallbacks[&quot;jumpPostSideCallBack&quot;] = jumpPostSideCallBack;
+    QFNew.jumpPostSide(content, 'currentcallbacks[&quot;jumpPostSideCallBack&quot;]');
+  } else {
+    QFNew.jumpPostSide(content, jumpPostSideCallBack);
+  }
+};
+
+//12、跳转用户个人主页
+QF.prototype.jumpUser = function (uid) {
+  QFNew.jumpUser(uid);
+};
+
+//13、跳转私信对话页
+QF.prototype.jumpTalk = function (uid, username, avatar) {
+  QFNew.jumpTalk(uid, username, avatar);
+};
+
+//14、跳转扫一扫页面
+QF.prototype.jumpScan = function (jumpScanCallBack) {
+  if (typeof jumpScanCallBack == 'function') {
+    currentcallbacks[&quot;jumpScanCallBack&quot;] = jumpScanCallBack;
+    QFNew.jumpScan('currentcallbacks[&quot;jumpScanCallBack&quot;]');
+  } else {
+    QFNew.jumpScan(jumpScanCallBack);
+  }
+};
+
+//15、跳转外部浏览器
+QF.prototype.outOpen = function (url) {
+  QFNew.outOpen(url);
+};
+
+//16、打开分享平台
+QF.prototype.openShare = function (platform) {
+  QFNew.openShare(platform);
+};
+
+//17、调用更多分享弹窗
+QF.prototype.openShareDialog = function () {
+  QFNew.openShareDialog();
+};
+
+//18、安卓打开其他应用
+QF.prototype.openApp = function (packagename) {
+  QFNew.openApp(packagename);
+};
+
+
+//19、调用客户端发送短信的接口
+QF.prototype.sendSMS = function (phone, content, sendSMSCallBack) {
+  if (typeof sendSMSCallBack == 'function') {
+    currentcallbacks[&quot;sendSMSCallBack&quot;] = sendSMSCallBack;
+    QFNew.sendSMS(phone, content, 'currentcallbacks[&quot;sendSMSCallBack&quot;]');
+  } else {
+    QFNew.sendSMS(phone, content, sendSMSCallBack);
+  }
+};
+
+
+//20、调用原生界面浏览大图
+QF.prototype.viewImages = function (position, jsonArray) {
+  QFNew.viewImages(position, jsonArray);
+};
+
+
+//21、设置分享,shareType 1:链接分享 2:图片分享 3:小程序分享 shareAppLink 分享协议 WxMiniProgram 小程序参数，string
+QF.prototype.setShareInfo = function (title, image, description, url, setShareInfoCallBack, shareType, shareAppLink, WxMiniProgram) {
+  if (typeof setShareInfoCallBack == 'function') {
+    currentcallbacks[&quot;setShareInfoCallBack&quot;] = setShareInfoCallBack;
+    QFNew.setShareInfo(title, image, description, url, 'currentcallbacks[&quot;setShareInfoCallBack&quot;]', shareType, shareAppLink, WxMiniProgram);
+  } else {
+    QFNew.setShareInfo(title, image, description, url, setShareInfoCallBack, shareType, shareAppLink, WxMiniProgram);
+  }
+};
+
+//22、隐藏右上角菜单按钮
+QF.prototype.setMenu = function (hide) {
+  QFNew.setMenu(hide);
+};
+
+//23、隐藏分享按钮（同时隐藏复制链接地址）
+QF.prototype.setSharable = function (hide) {
+  QFNew.setSharable(hide);
+};
+
+//24、隐藏外部浏览器打开按钮
+QF.prototype.setOutOpen = function (hide) {
+  QFNew.setOutOpen(hide);
+};
+
+//25、关闭当前Webview
+QF.prototype.close = function () {
+  QFNew.close();
+};
+
+
+//26、获取当前经纬度
+QF.prototype.getLocation = function (getLocationCallBack) {
+  if (typeof getLocationCallBack == 'function') {
+    currentcallbacks[&quot;getLocationCallBack&quot;] = getLocationCallBack;
+    QFNew.getLocation('currentcallbacks[&quot;getLocationCallBack&quot;]');
+  } else {
+    QFNew.getLocation(getLocationCallBack);
+  }
+};
+
+//27、获取当前用户信息
+QF.prototype.getUserInfo = function (getUserInfoCallBack) {
+  if (typeof getUserInfoCallBack == 'function') {
+    currentcallbacks[&quot;getUserInfoCallBack&quot;] = getUserInfoCallBack;
+    QFNew.getUserInfo('currentcallbacks[&quot;getUserInfoCallBack&quot;]');
+  } else {
+    QFNew.getUserInfo(getUserInfoCallBack);
+  }
+};
+
+
+//28、获取设备号
+QF.prototype.getDeviceId = function (getDeviceIdCallBack) {
+  if (typeof getDeviceIdCallBack == 'function') {
+    currentcallbacks[&quot;getDeviceIdCallBack&quot;] = getDeviceIdCallBack;
+    QFNew.getDeviceId('currentcallbacks[&quot;getDeviceIdCallBack&quot;]');
+  } else {
+    QFNew.getDeviceId(getDeviceIdCallBack);
+  }
+};
+
+//29、跳转编辑个人中心页面
+QF.prototype.jumpProfile = function () {
+  QFNew.jumpProfile();
+};
+
+//30、通知应用更新用户金币、等级、签到等信息
+QF.prototype.shouldUpdateGoldLevel = function () {
+  QFNew.shouldUpdateGoldLevel();
+};
+
+//31、调用原生打赏页面
+QF.prototype.reward = function (uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, rewardCallBack) {
+  if (typeof rewardCallBack == 'function') {
+    currentcallbacks[&quot;rewardCallBack&quot;] = rewardCallBack;
+    QFNew.reward(uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, 'currentcallbacks[&quot;rewardCallBack&quot;]');
+  } else {
+    QFNew.reward(uid, username, avatar, rewarddesc, rewardmsgplaceholder, lv, lvname, gender, showcashblock, showgoldblock, rewardstep, cashstep, rewardCallBack);
+  }
+};
+
+//32、新增h5打赏，支持打赏url。
+QF.prototype.jumpReward = function (json, jumpRewardCallBack) {
+  if (typeof jumpRewardCallBack == 'function') {
+    currentcallbacks[&quot;jumpRewardCallBack&quot;] = jumpRewardCallBack;
+    QFNew.jumpReward(json, 'currentcallbacks[&quot;jumpRewardCallBack&quot;]');
+  } else {
+    QFNew.jumpReward(json, jumpRewardCallBack);
+  }
+};
+
+//33、显示客户端原生Toast
+QF.prototype.toast = function (type, content, duration) {
+  QFNew.toast(type, content, duration);
+};
+
+//34、显示右上角刷新按钮
+QF.prototype.setRefresh = function (show) {
+  QFNew.setRefresh(show);
+};
+
+//35、设置Webview标题
+QF.prototype.setTitle = function (title) {
+  QFNew.setTitle(title);
+};
+
+//36、跳转本地圈交友页面
+QF.prototype.jumpFriendContainer = function (type) {
+  QFNew.jumpFriendContainer(type);
+};
+
+//37、跳转新的Webview
+QF.prototype.jumpNewWebview = function (url) {
+  QFNew.jumpNewWebview(url);
+};
+
+//38、跳转支付页面
+QF.prototype.jumpPayOrder = function (orderId, jumpPayOrderCallBack) {
+  if (typeof jumpPayOrderCallBack == 'function') {
+    currentcallbacks[&quot;jumpPayOrderCallBack&quot;] = jumpPayOrderCallBack;
+    QFNew.jumpPayOrder(orderId, 'currentcallbacks[&quot;jumpPayOrderCallBack&quot;]');
+  } else {
+    QFNew.jumpPayOrder(orderId, jumpPayOrderCallBack);
+  }
+};
+
+//39、给站点创建订单
+QF.prototype.createOrder = function (type, item, send_type, address, allow_pay_type, createOrderCallBack) {
+  if (typeof createOrderCallBack == 'function') {
+    currentcallbacks[&quot;createOrderCallBack&quot;] = createOrderCallBack;
+    QFNew.createOrder(type, item, send_type, address, allow_pay_type, 'currentcallbacks[&quot;createOrderCallBack&quot;]');
+  } else {
+    QFNew.createOrder(type, item, send_type, address, allow_pay_type, createOrderCallBack);
+  }
+};
+
+//40、这个方法是给站点调用的调起支付,支付到站点
+QF.prototype.jumpPay = function (type, item, send_type, address, allow_pay_type, jumpPayCallBack) {
+  if (typeof jumpPayCallBack == 'function') {
+    currentcallbacks[&quot;jumpPayCallBack&quot;] = jumpPayCallBack;
+    QFNew.jumpPay(type, item, send_type, address, allow_pay_type, 'currentcallbacks[&quot;jumpPayCallBack&quot;]');
+  } else {
+    QFNew.jumpPay(type, item, send_type, address, allow_pay_type, jumpPayCallBack);
+  }
+};
+
+
+//41、支付到千帆
+QF.prototype.jumpPayQF = function (type, item, send_type, address, jumpPayQFCallBack) {
+  if (typeof jumpPayQFCallBack == 'function') {
+    currentcallbacks[&quot;jumpPayQFCallBack&quot;] = jumpPayQFCallBack;
+    QFNew.jumpPayQF(type, item, send_type, address, 'currentcallbacks[&quot;jumpPayQFCallBack&quot;]');
+  } else {
+    QFNew.jumpPayQF(type, item, send_type, address, jumpPayQFCallBack);
+  }
+};
+
+//42、跳转收货地址页面
+QF.prototype.jumpAddress = function (jumpAddressCallBack) {
+  if (typeof jumpAddressCallBack == 'function') {
+    currentcallbacks[&quot;jumpAddressCallBack&quot;] = jumpAddressCallBack;
+    QFNew.jumpAddress('currentcallbacks[&quot;jumpAddressCallBack&quot;]');
+  } else {
+    QFNew.jumpAddress(jumpAddressCallBack);
+  }
+};
+
+//43、更改名字后调用
+QF.prototype.afterChangeName = function (newName, renameCard) {
+  QFNew.afterChangeName(newName, renameCard);
+};
+
+//44、跳转我的钱包页面
+QF.prototype.jumpMyPackage = function () {
+  QFNew.jumpMyPackage();
+};
+
+//45、弹出电话弹窗
+QF.prototype.jumpTel = function (telNum) {
+  QFNew.jumpTel(telNum);
+};
+
+//46、跳转pos通
+QF.prototype.jumpPos = function () {
+  QFNew.jumpPos();
+};
+
+//47、跳转点赞列表
+QF.prototype.jumpLikeList = function (tid) {
+  QFNew.jumpLikeList(tid);
+};
+
+//48、跳转加入群组
+QF.prototype.jumpGroup = function (gid) {
+  QFNew.jumpGroup(gid);
+};
+
+//49、创建订单
+QF.prototype.Order = function (json, OrderCallBack) {
+  if (typeof OrderCallBack == 'function') {
+    currentcallbacks[&quot;OrderCallBack&quot;] = OrderCallBack;
+    QFNew.Order(json, 'currentcallbacks[&quot;OrderCallBack&quot;]');
+  } else {
+    QFNew.Order(json, OrderCallBack);
+  }
+};
+
+
+//50、跳转红包列表
+QF.prototype.jumpEnvelopeList = function () {
+  QFNew.jumpEnvelopeList();
+};
+
+
+//51、跳转红包列表
+QF.prototype.provideLogin = function (loginType, openid, unionid, nickname) {
+  QFNew.provideLogin(loginType, openid, unionid, nickname);
+};
+
+
+//52、打开红包
+QF.prototype.openPacket = function (json, packetCallBack) {
+  QFNew.openPacket(json, packetCallBack);
+};
+
+//53、唤起送礼dialog
+QF.prototype.jumpThreadGiftDialog = function (tid, fid, uid, giftCallBack) {
+  if (typeof giftCallBack == 'function') {
+    currentcallbacks[&quot;giftCallBack&quot;] = giftCallBack;
+    QFNew.jumpThreadGiftDialog(tid, fid, uid, 'currentcallbacks[&quot;giftCallBack&quot;]');
+  } else {
+    QFNew.jumpThreadGiftDialog(tid, fid, uid, giftCallBack);
+  }
+};
+
+//54、唤起送礼排行榜
+QF.prototype.jumpThreadGiftRank = function (tid) {
+  QFNew.jumpThreadGiftRank(tid);
+};
+
+QF.prototype.setScan = function (hide) {
+  QFNew.setScan(hide);
+};
+
+//55、判断当前设备是否开启接口app通知
+QF.prototype.getSystemNotice = function (needAlert, noticeCallBack) {
+  if (typeof noticeCallBack == 'function') {
+    currentcallbacks[&quot;noticeCallBack&quot;] = noticeCallBack;
+    QFNew.getSystemNotice(needAlert, 'currentcallbacks[&quot;noticeCallBack&quot;]');
+  } else {
+    QFNew.getSystemNotice(needAlert, noticeCallBack);
+  }
+};
+
+//56、上传图片/视频
+//    type 0: 公有 1:私有
+//    jsUploadOptions
+//          picFormat: 0 =&gt; jpeg,png 1=&gt; jpeg,png,gif 2=&gt;gif
+//          picMaxSize: 图片压缩后的最大宽高
+//          compressOption : 图片压缩比
+//          uploadNum: 上传数量
+//          uploadType: 0: 图片 1:视频
+//    callback
+QF.prototype.uploadImageOrVideo = function (type, jsUploadOptions, UploadCallBack) {
+  if (typeof UploadCallBack == 'function') {
+    currentcallbacks[&quot;UploadCallBack&quot;] = UploadCallBack;
+    QFNew.uploadImageOrVideo(type, jsUploadOptions, 'currentcallbacks[&quot;UploadCallBack&quot;]');
+  } else {
+    QFNew.uploadImageOrVideo(type, jsUploadOptions, UploadCallBack);
+  }
+};
+
+//跳转免责申明
+QF.prototype.jumpDisclaimer = function () {
+  QFNew.jumpDisclaimer();
+};
+
+// 设置页面淘口令分享，一旦设置，将代替setShareInfo
+QF.prototype.setShareWord = function (word, koulingCallBack) {
+  if (typeof koulingCallBack == 'function') {
+    currentcallbacks[&quot;koulingCallBack&quot;] = koulingCallBack;
+    QFNew.setShareWord(word, 'currentcallbacks[&quot;koulingCallBack&quot;]')
+  } else {
+    QFNew.setShareWord(word, koulingCallBack)
+  }
+}
+
+// 跳分类信息聊天
+QF.prototype.jumpTalkWithClassify = function (uid, username, avatar, jsChatClassifyParams) {
+  QFNew.jumpTalkWithClassify(uid, username, avatar, jsChatClassifyParams);
+};
+
+// 设置分类信息详情页的参数
+// source_id: 分类信息id
+// is_collect:是否收藏 1 =&gt; 已收藏 0 =&gt; 未收藏
+// can_get_envelope //该用户是否可以获取红包 0；没有红包标识 1：红包标识(已领取) 2红包标识(不可领取)
+// envelope_id: 红包id
+// group_id
+// category_id
+// share_envelope 用户是否可以塞红包 0: 不能 1: 能
+QF.prototype.setClassifyDetail = function (source_id, author_id, is_collect, can_get_envelope, category_id, group_id, envelope_id, share_envelope) {
+  QFNew.setClassifyDetail(source_id, author_id, is_collect, can_get_envelope, category_id, group_id, envelope_id, share_envelope);
+}
+
+// 根据经纬度去定位地图，选点后返回经纬度和具体地址 data: {lat:'',lan:'',address:''} type:1 可选 2 展示
+QF.prototype.jumpMap = function (lat, lng, address, type, mapCallback) {
+  if (typeof mapCallback == 'function') {
+    currentcallbacks[&quot;mapCallback&quot;] = mapCallback;
+    QFNew.jumpMap(lat, lng, address, type, 'currentcallbacks[&quot;mapCallback&quot;]')
+  } else {
+    QFNew.jumpMap(lat, lng, address, type, mapCallback)
+  }
+}
+
+QF.prototype.hideLoading = function () {
+  QFNew.dismissLoading();
+}
+
+QF.prototype.getClassifyViewInfo = function (infoId, viewInfoCallback) {
+  if (typeof viewInfoCallback == 'function') {
+    currentcallbacks[&quot;viewInfoCallback&quot;] = viewInfoCallback;
+    QFNew.getClassifyViewInfo(infoId, 'currentcallbacks[&quot;viewInfoCallback&quot;]');
+  } else {
+    QFNew.getClassifyViewInfo(infoId, viewInfoCallback);
+  }
+}
+
+QF.prototype.getClassifyViewInfo = function (infoId, viewInfoCallback) {
+  if (typeof viewInfoCallback == 'function') {
+    currentcallbacks[&quot;viewInfoCallback&quot;] = viewInfoCallback;
+    QFNew.getClassifyViewInfo(infoId, 'currentcallbacks[&quot;viewInfoCallback&quot;]');
+  } else {
+    QFNew.getClassifyViewInfo(infoId, viewInfoCallback);
+  }
+}
+
+// 跳新页面并且关闭当前页面
+QF.prototype.jumpNewWebviewWithClose = function (url) {
+  QFNew.jumpNewWebviewWithClose(url);
+}
+
+QF.prototype.jumpMiniProgram = function (wxid, wxpath, minCallback) {
+  if (typeof minCallback == 'function') {
+    currentcallbacks[&quot;minCallback&quot;] = minCallback;
+    QFNew.jumpMiniProgram(wxid, wxpath, 'currentcallbacks[&quot;minCallback&quot;]');
+  } else {
+    QFNew.jumpMiniProgram(wxid, wxpath, minCallback);
+  }
+}
+
+// 60 调用客户端input框
+QF.prototype.showCustomEditor = function (requestUrl, additionalParams, componentControl, editorCallback) {
+  if (typeof editorCallback == 'function') {
+    currentcallbacks[&quot;editorCallback&quot;] = editorCallback;
+    QFNew.showCustomEditor(requestUrl, additionalParams, componentControl, 'currentcallbacks[&quot;editorCallback&quot;]');
+  } else {
+    QFNew.showCustomEditor(requestUrl, additionalParams, componentControl, editorCallback);
+  }
+}
+
+QF.prototype.openMapList = function (Longitude, latitude) {
+  QFNew.openMapList(Longitude, latitude)
+}
+
+QF.prototype.bottomReplyComponent = function (buttons) {
+  QFNew.bottomReplyComponent(buttons)
+}
+
+QF.prototype.replyComponent = function (replyConfig, replyCallback) {
+  if (typeof replyCallback == 'function') {
+    currentcallbacks[&quot;replyCallback&quot;] = replyCallback;
+    QFNew.replyComponent(replyConfig, 'currentcallbacks[&quot;replyCallback&quot;]');
+  } else {
+    QFNew.replyComponent(replyConfig, replyCallback);
+  }
+}
+
+QF.prototype.sendRedPackage = function (source, source_id, options, sendRedPackageCallback) {
+  if (typeof sendRedPackageCallback == 'function') {
+    currentcallbacks[&quot;sendRedPackageCallback&quot;] = sendRedPackageCallback;
+    QFNew.sendRedPackage(source, source_id, options, 'currentcallbacks[&quot;sendRedPackageCallback&quot;]');
+  } else {
+    QFNew.sendRedPackage(source, source_id, options, sendRedPackageCallback);
+  }
+}
+
+QF.prototype.openRedPackage = function (package_id, options, openRedPackageCallback) {
+  if (typeof openRedPackageCallback == 'function') {
+    currentcallbacks[&quot;openRedPackageCallback&quot;] = openRedPackageCallback;
+    QFNew.openRedPackage(package_id, options, 'currentcallbacks[&quot;openRedPackageCallback&quot;]');
+  } else {
+    QFNew.openRedPackage(package_id, options, openRedPackageCallback);
+  }
+}
+
+QF.prototype.getUmengInfo = function (getUmengInfoCallback) {
+  if (typeof getUmengInfoCallback == 'function') {
+    currentcallbacks[&quot;getUmengInfoCallback&quot;] = getUmengInfoCallback;
+    QFNew.getUmengInfo('currentcallbacks[&quot;getUmengInfoCallback&quot;]');
+  } else {
+    QFNew.getUmengInfo(getUmengInfoCallback);
+  }
+}
+
+QF.prototype.getRequestParams = function (objectKeys, options, requestCallback) {
+  if (typeof requestCallback == 'function') {
+    currentcallbacks[&quot;requestCallback&quot;] = requestCallback;
+    QFNew.getRequestParams(objectKeys, options, 'currentcallbacks[&quot;requestCallback&quot;]');
+  } else {
+    QFNew.getRequestParams(objectKeys, options, requestCallback);
+  }
+}
+
+QF.prototype.jumpThirdLogin = function (platform, thirdLoginCallback) {
+  if (typeof thirdLoginCallback == 'function') {
+    currentcallbacks[&quot;thirdLoginCallback&quot;] = thirdLoginCallback;
+    QFNew.jumpThirdLogin(platform, 'currentcallbacks[&quot;thirdLoginCallback&quot;]');
+  } else {
+    QFNew.jumpThirdLogin(platform, thirdLoginCallback);
+  }
+}
+
+QF.prototype.getUserThirdInfo = function (thirdInfoCallback) {
+  if (typeof thirdInfoCallback == 'function') {
+    currentcallbacks[&quot;thirdInfoCallback&quot;] = thirdInfoCallback;
+    QFNew.getUserThirdInfo('currentcallbacks[&quot;thirdInfoCallback&quot;]');
+  } else {
+    QFNew.getUserThirdInfo(thirdInfoCallback);
+  }
+}
+
+QF.prototype.jumpBindThirdPlatform = function (platform, bindThirdCallback) {
+  if (typeof bindThirdCallback == 'function') {
+    currentcallbacks[&quot;bindThirdCallback&quot;] = bindThirdCallback;
+    QFNew.jumpBindThirdPlatform(platform, 'currentcallbacks[&quot;bindThirdCallback&quot;]');
+  } else {
+    QFNew.jumpBindThirdPlatform(platform, bindThirdCallback);
+  }
+}
+
+QF.prototype.showImageRemarkLayer = function (remark, remarkCallback) {
+  if (typeof remarkCallback == 'function') {
+    currentcallbacks[&quot;remarkCallback&quot;] = remarkCallback;
+    QFNew.showImageRemarkLayer(remark, 'currentcallbacks[&quot;remarkCallback&quot;]');
+  } else {
+    QFNew.showImageRemarkLayer(remark, remarkCallback);
+  }
+}
+
+
+QF.prototype.jumpEditLink = function (text, link, linkCallback) {
+  if (typeof linkCallback == 'function') {
+    currentcallbacks[&quot;linkCallback&quot;] = linkCallback;
+    QFNew.jumpEditLink(text, link, 'currentcallbacks[&quot;linkCallback&quot;]');
+  } else {
+    QFNew.jumpEditLink(text, link, linkCallback);
+  }
+}
+
+QF.prototype.listCoverImages = function (listImagesCallback) {
+  if (typeof listImagesCallback == 'function') {
+    currentcallbacks[&quot;listImagesCallback&quot;] = listImagesCallback;
+    QFNew.listCoverImages('currentcallbacks[&quot;listImagesCallback&quot;]');
+  } else {
+    QFNew.listCoverImages(listImagesCallback);
+  }
+}
+
+QF.prototype.getNotificationStatus = function (noticeCallback) {
+  if (typeof noticeCallback == 'function') {
+    currentcallbacks[&quot;noticeCallback&quot;] = noticeCallback
+    QFNew.getNotificationStatus('currentcallbacks[&quot;noticeCallback&quot;]')
+  } else {
+    QFNew.getNotificationStatus(noticeCallback)
+  }
+}
+
+QF.prototype.showNotificationDialog = function () {
+  QFNew.showNotificationDialog()
+}
+
+QF.prototype.jumpNotificationSetting = function () {
+  QFNew.jumpNotificationSetting()
+}
+var QFH5 = new QF();
+</code></pre>
+<h3 id="马甲">马甲</h3>
+<pre><code class="language-javascript">!
+function() {
+    function n(n) {
+        if (!window.MagAndroidClient) {
+            if (window.WebViewJavascriptBridge) return n(WebViewJavascriptBridge);
+            if (document.addEventListener(&quot;WebViewJavascriptBridgeReady&quot;,
+            function(i) {
+                n(WebViewJavascriptBridge)
+            },
+            !1), window.WVJBCallbacks) return window.WVJBCallbacks.push(n);
+            window.WVJBCallbacks = [n];
+            var i = document.createElement(&quot;iframe&quot;);
+            i.style.display = &quot;none&quot;,
+            i.src = &quot;https://__bridge_loaded__&quot;,
+            document.documentElement.appendChild(i),
+            setTimeout(function() {
+                document.documentElement.removeChild(i)
+            },
+            0)
+        }
+    }
+    n(function(n) {
+        n.init &amp;&amp; &quot;function&quot; == typeof n.init &amp;&amp; n.init(function(n, i) {}),
+        n.registerHandler(&quot;jsCallBack&quot;,
+        function(n, i) {
+            var o = JSON.parse(n),
+            a = o.id,
+            e = o.val,
+            t = mag.callbacks[a];
+            t &amp;&amp; (t.type &amp;&amp; &quot;json&quot; == t.type &amp;&amp; e &amp;&amp; (e = JSON.parse(e)), t.success(e))
+        })
+    }),
+    mag = {
+        VERSION: &quot;1.1&quot;,
+        ready: function(i) {
+            n(function() {
+                i()
+            }),
+            window.MagAndroidClient &amp;&amp; i()
+        },
+        callbacks: {},
+        iosConnect: n,
+        jsCallBack: function(n, i) {
+            var o = mag.callbacks[n];
+            o &amp;&amp; (o.type &amp;&amp; &quot;json&quot; == o.type &amp;&amp; i &amp;&amp; (i = JSON.parse(i)), o.success(i))
+        },
+        getLocation: function(i) {
+            i &amp;&amp; (mag.callbacks.getLocation = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getLocation(), n(function(n) {
+                n.callHandler(&quot;getLocation&quot;, &quot;&quot;,
+                function(n) {})
+            }))
+        },
+        mapPick: function(i) {
+            i &amp;&amp; (mag.callbacks.mapPick = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.mapPick(), n(function(n) {
+                n.callHandler(&quot;mapPick&quot;, &quot;&quot;,
+                function() {})
+            }))
+        },
+        closeWin: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.closeWin(),
+            n(function(n) {
+                n.callHandler(&quot;closeWin&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        previewImage: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.previewImage(o),
+            n(function(n) {
+                n.callHandler(&quot;previewImage&quot;, o,
+                function(n) {})
+            })
+        },
+        picPick: function(i) {
+            mag.callbacks.picPickPreview = {
+                type: &quot;json&quot;,
+                success: i.preview
+            },
+            mag.callbacks.picPickSuccess = {
+                type: &quot;json&quot;,
+                success: i.success
+            },
+            mag.callbacks.picPickFail = {
+                type: &quot;json&quot;,
+                success: i.fail
+            };
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.picPick(o),
+            n(function(n) {
+                n.callHandler(&quot;picPick&quot;, o,
+                function(n) {})
+            })
+        },
+        camera: function(i) {
+            mag.callbacks.cameraPreview = {
+                type: &quot;json&quot;,
+                success: i.preview
+            },
+            mag.callbacks.cameraSuccess = {
+                type: &quot;json&quot;,
+                success: i.success
+            },
+            mag.callbacks.cameraFail = {
+                type: &quot;json&quot;,
+                success: i.fail
+            };
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.camera(o),
+            n(function(n) {
+                n.callHandler(&quot;camera&quot;, o,
+                function(n) {})
+            })
+        },
+        setData: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setData(o),
+            n(function(n) {
+                n.callHandler(&quot;setData&quot;, o,
+                function(n) {})
+            })
+        },
+        share: function(i, o, a) {
+            mag.callbacks.shareSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.shareFailed = {
+                type: &quot;&quot;,
+                success: a
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.share(i),
+            n(function(n) {
+                n.callHandler(&quot;share&quot;, i,
+                function(n) {})
+            })
+        },
+        shareCard: function(i, o, a) {
+            mag.callbacks.shareSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.shareFailed = {
+                type: &quot;&quot;,
+                success: a
+            };
+            var e = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.shareCard(e),
+            n(function(n) {
+                n.callHandler(&quot;shareCard&quot;, e,
+                function(n) {})
+            })
+        },
+        socialBind: function(i, o, a) {
+            mag.callbacks.bindOnSuccess = {
+                type: &quot;json&quot;,
+                success: o
+            },
+            mag.callbacks.bindOnFail = {
+                type: &quot;json&quot;,
+                success: a
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.socialBind(i),
+            n(function(n) {
+                n.callHandler(&quot;socialBind&quot;, i,
+                function(n) {})
+            })
+        },
+        report: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.report(o),
+            n(function(n) {
+                n.callHandler(&quot;report&quot;, o,
+                function(n) {})
+            })
+        },
+        scanQR: function(i) {
+            i &amp;&amp; (mag.callbacks.scanQR = {
+                type: &quot;&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.scanQR(), n(function(n) {
+                n.callHandler(&quot;scanQR&quot;, &quot;&quot;,
+                function(n) {})
+            }))
+        },
+        actionSheet: function(i, o) {
+            if (o) {
+                var a = JSON.stringify(i);
+                mag.callbacks.actionSheet = {
+                    type: &quot;json&quot;,
+                    success: o
+                },
+                window.MagAndroidClient &amp;&amp; window.MagAndroidClient.actionSheet(a),
+                n(function(n) {
+                    n.callHandler(&quot;actionSheet&quot;, a,
+                    function(n) {})
+                })
+            }
+        },
+        toast: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toast(i),
+            n(function(n) {
+                n.callHandler(&quot;toast&quot;, i,
+                function(n) {})
+            })
+        },
+        dialog: function(i) {
+            var o = JSON.stringify(i);
+            mag.callbacks.dialogSuccess = {
+                type: &quot;json&quot;,
+                success: i.success
+            },
+            mag.callbacks.dialogCancel = {
+                type: &quot;json&quot;,
+                success: i.cancel
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.dialog(o),
+            n(function(n) {
+                n.callHandler(&quot;dialog&quot;, o,
+                function(n) {})
+            })
+        },
+        progress: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.progress(),
+            n(function(n) {
+                n.callHandler(&quot;progress&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        hideProgress: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideProgress(),
+            n(function(n) {
+                n.callHandler(&quot;hideProgress&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        setTitle: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setTitle(i),
+            n(function(n) {
+                n.callHandler(&quot;setTitle&quot;, i,
+                function(n) {})
+            })
+        },
+        showNavigation: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.showNavigation(),
+            n(function(n) {
+                n.callHandler(&quot;showNavigation&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        hideNavigation: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideNavigation(),
+            n(function(n) {
+                n.callHandler(&quot;hideNavigation&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        setNavigationColor: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setNavigationColor(i),
+            n(function(n) {
+                n.callHandler(&quot;setNavigationColor&quot;, i,
+                function(n) {})
+            })
+        },
+        hideMore: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideMore(),
+            n(function(n) {
+                n.callHandler(&quot;hideMore&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        showMore: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.showMore(),
+            n(function(n) {
+                n.callHandler(&quot;showMore&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        tel: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.tel(i),
+            n(function(n) {
+                n.callHandler(&quot;tel&quot;, i,
+                function(n) {})
+            })
+        },
+        sms: function(i, o) {
+            var a = JSON.stringify({
+                phone: i,
+                content: o
+            });
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.sms(a),
+            n(function(n) {
+                n.callHandler(&quot;sms&quot;, a,
+                function(n) {})
+            })
+        },
+        toLogin: function(i) {
+            mag.callbacks.loginSuccess = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toLogin(),
+            n(function(n) {
+                n.callHandler(&quot;toLogin&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        toUserHome: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toUserHome(i),
+            n(function(n) {
+                n.callHandler(&quot;toUserHome&quot;, i,
+                function(n) {})
+            })
+        },
+        addRedPacket: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.addRedPacket(i),
+            n(function(n) {
+                n.callHandler(&quot;addRedPacket&quot;, i,
+                function(n) {})
+            })
+        },
+        toUserHomeByName: function(i) {
+            i &amp;&amp; (window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toUserHomeByName(i), n(function(n) {
+                n.callHandler(&quot;toUserHomeByName&quot;, i,
+                function(n) {})
+            }))
+        },
+        commentBar: function(i) {
+            var o = JSON.stringify(i);
+            i.onComment &amp;&amp; (mag.callbacks.commentBar = {
+                type: &quot;json&quot;,
+                success: i.onComment
+            }),
+            i.onCommentShow &amp;&amp; (mag.callbacks.onCommentShow = {
+                type: &quot;&quot;,
+                success: i.onCommentShow
+            }),
+            i.onPageSelect &amp;&amp; (mag.callbacks.pageSelect = {
+                type: &quot;json&quot;,
+                success: i.onPageSelect
+            }),
+            i.onApplaud &amp;&amp; (mag.callbacks.applaud = {
+                type: &quot;json&quot;,
+                success: i.onApplaud
+            }),
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.commentBar(o),
+            n(function(n) {
+                n.callHandler(&quot;commentBar&quot;, o,
+                function(n) {})
+            })
+        },
+        toComment: function(i) {
+            var o = JSON.stringify(i);
+            i.success &amp;&amp; (mag.callbacks.comment = {
+                type: &quot;json&quot;,
+                success: i.success
+            }),
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.toComment(o),
+            n(function(n) {
+                n.callHandler(&quot;toComment&quot;, o,
+                function(n) {})
+            })
+        },
+        newWin: function(i, o) {
+            i.indexOf(&quot;?&quot;) &lt; 0 &amp;&amp; (i += &quot;?&quot;);
+            for (var a in o) i += &quot;&amp;&quot; + a + &quot;=&quot; + o[a];
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.newWin(i),
+            n(function(n) {
+                n.callHandler(&quot;newWin&quot;, i,
+                function(n) {})
+            })
+        },
+        setPageLife: function(n) {
+            mag.callbacks.pageAppear = {
+                type: &quot;&quot;,
+                success: n.pageAppear
+            },
+            mag.callbacks.pageDisappear = {
+                type: &quot;&quot;,
+                success: n.pageDisappear
+            }
+        },
+        followAuthorFromNative: function(n) {
+            mag.callbacks.followAuthorFromNative = {
+                type: &quot;&quot;,
+                success: n.followAuthorFromNative
+            }
+        },
+        availableSharePlatform: function(i) {
+            mag.callbacks.availableSharePlatform = {
+                type: &quot;json&quot;,
+                success: i.availableSharePlatform
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.availableSharePlatform(),
+            n(function(n) {
+                n.callHandler(&quot;availableSharePlatform&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        pay: function(i, o, a) {
+            mag.callbacks.payOnSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.payOnFail = {
+                type: &quot;&quot;,
+                success: a
+            };
+            var e = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.pay(e),
+            n(function(n) {
+                n.callHandler(&quot;pay&quot;, e,
+                function(n) {})
+            })
+        },
+        alipay: function(i, o, a) {
+            if (!i) return ! 1;
+            mag.callbacks.alipayOnSuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.alipayOnFail = {
+                type: &quot;&quot;,
+                success: a
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.alipay(i),
+            n(function(n) {
+                n.callHandler(&quot;alipay&quot;, i,
+                function(n) {})
+            })
+        },
+        inAppPay: function(i, o, a) {
+            mag.callbacks.inAppPaySuccess = {
+                type: &quot;&quot;,
+                success: o
+            },
+            mag.callbacks.inAppPayOnFail = {
+                type: &quot;&quot;,
+                success: a
+            };
+            var e = JSON.stringify(i);
+            n(function(n) {
+                n.callHandler(&quot;inAppPay&quot;, e,
+                function(n) {})
+            })
+        },
+        deviceLogin: function(i) {
+            mag.callbacks.loginSuccess = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            n(function(n) {
+                n.callHandler(&quot;deviceLogin&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        phoneBind: function(i) {
+            mag.callbacks.phoneBindSuccess = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.phoneBind(),
+            n(function(n) {
+                n.callHandler(&quot;phoneBind&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        qqConnectLogin: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.qqConnectLogin(i),
+            n(function(n) {
+                n.callHandler(&quot;qqConnectLogin&quot;, i,
+                function(n) {})
+            })
+        },
+        bounceEnable: function(i) {
+            n(function(n) {
+                n.callHandler(&quot;bounceEnable&quot;, i,
+                function(n) {})
+            })
+        },
+        showNaviAuthor: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.showNaviAuthor(),
+            n(function(n) {
+                n.callHandler(&quot;showNaviAuthor&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        hideNaviAuthor: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.hideNaviAuthor(),
+            n(function(n) {
+                n.callHandler(&quot;hideNaviAuthor&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        followAuthorFromWeb: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.followAuthorFromWeb(i),
+            n(function(n) {
+                n.callHandler(&quot;followAuthorFromWeb&quot;, i,
+                function(n) {})
+            })
+        },
+        setSwipeBackDisable: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setSwipeBackDisable(),
+            n(function() {
+                bridge.callHandler(&quot;setSwipeBackDisable&quot;,
+                function(n) {})
+            })
+        },
+        setSwipeBackEnable: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.setSwipeBackEnable(),
+            n(function() {
+                bridge.callHandler(&quot;setSwipeBackEnable&quot;,
+                function(n) {})
+            })
+        },
+        addRefreshComponent: function() {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.addRefreshComponent(),
+            n(function(n) {
+                n.callHandler(&quot;addRefreshComponent&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        sappHome: function(i) {
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.sappHome(i),
+            n(function(n) {
+                n.callHandler(&quot;sappHome&quot;, i,
+                function(n) {})
+            })
+        },
+        chat: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.chat(o),
+            n(function(n) {
+                n.callHandler(&quot;chat&quot;, o,
+                function(n) {})
+            })
+        },
+        newExternalWin: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.newExternalWin(o),
+            n(function(n) {
+                n.callHandler(&quot;newExternalWin&quot;, o,
+                function(n) {})
+            })
+        },
+        getAppAuthKey: function(i) {
+            i &amp;&amp; (mag.callbacks.getAppAuthKey = {
+                type: &quot;json&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getAppAuthKey(), n(function(n) {
+                n.callHandler(&quot;getAppAuthKey&quot;, &quot;&quot;,
+                function(n) {})
+            }))
+        },
+        sendGift: function(i, o) {
+            var a = JSON.stringify(i);
+            mag.callbacks.giftSendSuccess = {
+                type: &quot;json&quot;,
+                success: o
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.sendGift(a),
+            n(function(n) {
+                n.callHandler(&quot;sendGift&quot;, a,
+                function(n) {})
+            })
+        },
+        showPhoneSettings: function() {
+            n(function(n) {
+                n.callHandler(&quot;showPhoneSettings&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        getNotificationStatus: function(i) {
+            mag.callbacks.getNotificationStatus = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            n(function(n) {
+                n.callHandler(&quot;getNotificationStatus&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        downloadAttachment: function(i) {
+            var o = JSON.stringify(i);
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.downloadAttachment(o),
+            n(function(n) {
+                n.callHandler(&quot;downloadAttachment&quot;, o,
+                function(n) {})
+            })
+        },
+        getNetworkState: function(i) {
+            mag.callbacks.getNetworkState = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getNetworkState(),
+            n(function(n) {
+                n.callHandler(&quot;getNetworkState&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        },
+        getDeviceId: function(i) {
+            mag.callbacks.getDeviceId = {
+                type: &quot;string&quot;,
+                success: i
+            },
+            window.MagAndroidClient &amp;&amp; window.MagAndroidClient.getDeviceId(),
+            n(function(n) {
+                n.callHandler(&quot;getDeviceId&quot;, &quot;&quot;,
+                function(n) {})
+            })
+        }
+    },
+    window.mag = mag,
+    mag.VERSION = &quot;1.3.2&quot;
+} ();
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://bluecat918.github.io/kuai-su-huo-qu-kai-fa-zhe-xiang-window-zhu-ru-de-quan-ju-bian-liang/">
+                  <h3 class="post-title">
+                    快速获取开发者向 window 注入的全局变量
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.staticfile.org/highlight.js/11.5.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
